@@ -87,7 +87,7 @@ class StretchViewController: UIViewController, GADBannerViewDelegate {
         self.timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(updateClock), userInfo: nil, repeats: true)
     }
     
-    func updateClock(){
+    @objc func updateClock(){
         if(stretches.count <= stretchIndex) {
             /* Go back to main page */
             navigationController?.popViewController(animated: true)

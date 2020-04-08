@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		32B306377CAB4F1C9DBF29A7 /* Pods_LetsStretch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CA4572F1280F7DB8EBF36A4 /* Pods_LetsStretch.framework */; };
-		547B5726A349BDB8C5DEAEAF /* Pods_LetsStretchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E02FB16E9F569A405FD4B84 /* Pods_LetsStretchUITests.framework */; };
-		5D3401AD34D8D7BD89C91CF2 /* Pods_LetsStretchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FBB9D3EA0C086BAD6622010 /* Pods_LetsStretchTests.framework */; };
+		459DA7EE12D9190EA3A9F9FA /* Pods_LetsStretchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6560D99F0AD92C2E9D0EC1C /* Pods_LetsStretchUITests.framework */; };
+		6D91C0C3C957F07CDD8F1CE2 /* Pods_LetsStretchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F38A2476227B69D920FF314A /* Pods_LetsStretchTests.framework */; };
+		869A1C1929B5E0198C6BD6A1 /* Pods_LetsStretch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 934A426A2D9EE183F7813F02 /* Pods_LetsStretch.framework */; };
 		E01C2D541F422941001118F2 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01C2D531F422941001118F2 /* Utils.swift */; };
 		E01FE0711F369BFD003ABDCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01FE0701F369BFD003ABDCA /* AppDelegate.swift */; };
 		E01FE0731F369BFD003ABDCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01FE0721F369BFD003ABDCA /* ViewController.swift */; };
@@ -45,14 +45,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2E02FB16E9F569A405FD4B84 /* Pods_LetsStretchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LetsStretchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4833A6BC4D6241E03D0B6A22 /* Pods-LetsStretchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsStretchUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LetsStretchUITests/Pods-LetsStretchUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		5E9E41126A7630C8C271DABC /* Pods-LetsStretchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsStretchTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LetsStretchTests/Pods-LetsStretchTests.debug.xcconfig"; sourceTree = "<group>"; };
-		6CA4572F1280F7DB8EBF36A4 /* Pods_LetsStretch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LetsStretch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		80343ED74E81BD5EED86A4E4 /* Pods-LetsStretchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsStretchUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LetsStretchUITests/Pods-LetsStretchUITests.release.xcconfig"; sourceTree = "<group>"; };
-		9FBB9D3EA0C086BAD6622010 /* Pods_LetsStretchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LetsStretchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C32C9F16AC2B46EF9F33239D /* Pods-LetsStretch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsStretch.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LetsStretch/Pods-LetsStretch.debug.xcconfig"; sourceTree = "<group>"; };
-		D54DF34C4BF5759ABE738AB4 /* Pods-LetsStretchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsStretchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-LetsStretchTests/Pods-LetsStretchTests.release.xcconfig"; sourceTree = "<group>"; };
+		461A1D4FD39EE536CDCB944D /* Pods-LetsStretchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsStretchUITests.release.xcconfig"; path = "Target Support Files/Pods-LetsStretchUITests/Pods-LetsStretchUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8802F12F2AA9356BFCA262AB /* Pods-LetsStretchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsStretchTests.release.xcconfig"; path = "Target Support Files/Pods-LetsStretchTests/Pods-LetsStretchTests.release.xcconfig"; sourceTree = "<group>"; };
+		8C4056958956AF03D3EBE2AB /* Pods-LetsStretchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsStretchTests.debug.xcconfig"; path = "Target Support Files/Pods-LetsStretchTests/Pods-LetsStretchTests.debug.xcconfig"; sourceTree = "<group>"; };
+		934A426A2D9EE183F7813F02 /* Pods_LetsStretch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LetsStretch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A6560D99F0AD92C2E9D0EC1C /* Pods_LetsStretchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LetsStretchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D16109B14AE4E7BDAA9DAAF5 /* Pods-LetsStretch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsStretch.release.xcconfig"; path = "Target Support Files/Pods-LetsStretch/Pods-LetsStretch.release.xcconfig"; sourceTree = "<group>"; };
+		DADFA529F91CE5F7202A4CBE /* Pods-LetsStretch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsStretch.debug.xcconfig"; path = "Target Support Files/Pods-LetsStretch/Pods-LetsStretch.debug.xcconfig"; sourceTree = "<group>"; };
+		DFCB45D27984135E7A7385F7 /* Pods-LetsStretchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsStretchUITests.debug.xcconfig"; path = "Target Support Files/Pods-LetsStretchUITests/Pods-LetsStretchUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E01C2D531F422941001118F2 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		E01FE06D1F369BFD003ABDCA /* LetsStretch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsStretch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01FE0701F369BFD003ABDCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -72,7 +72,7 @@
 		E01FE0A21F36B910003ABDCA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E01FE0A71F36BA42003ABDCA /* APIRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequests.swift; sourceTree = "<group>"; };
 		E01FE0A91F36C458003ABDCA /* StretchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StretchViewController.swift; sourceTree = "<group>"; };
-		E8CF60480BA741C990C46873 /* Pods-LetsStretch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsStretch.release.xcconfig"; path = "Pods/Target Support Files/Pods-LetsStretch/Pods-LetsStretch.release.xcconfig"; sourceTree = "<group>"; };
+		F38A2476227B69D920FF314A /* Pods_LetsStretchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LetsStretchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32B306377CAB4F1C9DBF29A7 /* Pods_LetsStretch.framework in Frameworks */,
+				869A1C1929B5E0198C6BD6A1 /* Pods_LetsStretch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D3401AD34D8D7BD89C91CF2 /* Pods_LetsStretchTests.framework in Frameworks */,
+				6D91C0C3C957F07CDD8F1CE2 /* Pods_LetsStretchTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,34 +96,35 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				547B5726A349BDB8C5DEAEAF /* Pods_LetsStretchUITests.framework in Frameworks */,
+				459DA7EE12D9190EA3A9F9FA /* Pods_LetsStretchUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C00F22F1C537AA39D7FDEB3 /* Frameworks */ = {
+		21DBD757EF0C7793DF317CFE /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				6CA4572F1280F7DB8EBF36A4 /* Pods_LetsStretch.framework */,
-				9FBB9D3EA0C086BAD6622010 /* Pods_LetsStretchTests.framework */,
-				2E02FB16E9F569A405FD4B84 /* Pods_LetsStretchUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		B0A4CD6C03A5EA949966A7F4 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				C32C9F16AC2B46EF9F33239D /* Pods-LetsStretch.debug.xcconfig */,
-				E8CF60480BA741C990C46873 /* Pods-LetsStretch.release.xcconfig */,
-				5E9E41126A7630C8C271DABC /* Pods-LetsStretchTests.debug.xcconfig */,
-				D54DF34C4BF5759ABE738AB4 /* Pods-LetsStretchTests.release.xcconfig */,
-				4833A6BC4D6241E03D0B6A22 /* Pods-LetsStretchUITests.debug.xcconfig */,
-				80343ED74E81BD5EED86A4E4 /* Pods-LetsStretchUITests.release.xcconfig */,
+				DADFA529F91CE5F7202A4CBE /* Pods-LetsStretch.debug.xcconfig */,
+				D16109B14AE4E7BDAA9DAAF5 /* Pods-LetsStretch.release.xcconfig */,
+				8C4056958956AF03D3EBE2AB /* Pods-LetsStretchTests.debug.xcconfig */,
+				8802F12F2AA9356BFCA262AB /* Pods-LetsStretchTests.release.xcconfig */,
+				DFCB45D27984135E7A7385F7 /* Pods-LetsStretchUITests.debug.xcconfig */,
+				461A1D4FD39EE536CDCB944D /* Pods-LetsStretchUITests.release.xcconfig */,
 			);
 			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C256360FE5759872C5309C8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				934A426A2D9EE183F7813F02 /* Pods_LetsStretch.framework */,
+				F38A2476227B69D920FF314A /* Pods_LetsStretchTests.framework */,
+				A6560D99F0AD92C2E9D0EC1C /* Pods_LetsStretchUITests.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		E01FE0641F369BFD003ABDCA = {
@@ -133,8 +134,8 @@
 				E01FE0841F369BFD003ABDCA /* LetsStretchTests */,
 				E01FE08F1F369BFD003ABDCA /* LetsStretchUITests */,
 				E01FE06E1F369BFD003ABDCA /* Products */,
-				B0A4CD6C03A5EA949966A7F4 /* Pods */,
-				0C00F22F1C537AA39D7FDEB3 /* Frameworks */,
+				21DBD757EF0C7793DF317CFE /* Pods */,
+				C256360FE5759872C5309C8A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -200,12 +201,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E01FE0951F369BFD003ABDCA /* Build configuration list for PBXNativeTarget "LetsStretch" */;
 			buildPhases = (
-				FF4A3E69FFF7FBD0D5D720EE /* [CP] Check Pods Manifest.lock */,
+				63AD67706152F027F3C7022C /* [CP] Check Pods Manifest.lock */,
 				E01FE0691F369BFD003ABDCA /* Sources */,
 				E01FE06A1F369BFD003ABDCA /* Frameworks */,
 				E01FE06B1F369BFD003ABDCA /* Resources */,
-				B834617A16C3B34885054B34 /* [CP] Embed Pods Frameworks */,
-				0A4FFE4DE2A3B5AEB55792F6 /* [CP] Copy Pods Resources */,
+				88ED7676A0A19AC8668E9365 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -220,12 +220,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E01FE0981F369BFD003ABDCA /* Build configuration list for PBXNativeTarget "LetsStretchTests" */;
 			buildPhases = (
-				793D4E66E612817F70F7E334 /* [CP] Check Pods Manifest.lock */,
+				C3499B2F63D81612E9953781 /* [CP] Check Pods Manifest.lock */,
 				E01FE07D1F369BFD003ABDCA /* Sources */,
 				E01FE07E1F369BFD003ABDCA /* Frameworks */,
 				E01FE07F1F369BFD003ABDCA /* Resources */,
-				2AE633655FF35109319DA994 /* [CP] Embed Pods Frameworks */,
-				ADB1A3BEB33AA48A17FBAB32 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -241,12 +239,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E01FE09B1F369BFD003ABDCA /* Build configuration list for PBXNativeTarget "LetsStretchUITests" */;
 			buildPhases = (
-				05F9D57BBFB12E1DEB30E0DA /* [CP] Check Pods Manifest.lock */,
+				FC5BECDBF7DA71274E6F915A /* [CP] Check Pods Manifest.lock */,
 				E01FE0881F369BFD003ABDCA /* Sources */,
 				E01FE0891F369BFD003ABDCA /* Frameworks */,
 				E01FE08A1F369BFD003ABDCA /* Resources */,
-				7B3735E67F941172AF9744AF /* [CP] Embed Pods Frameworks */,
-				1D1BC03A4E45994D336A2F51 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -292,6 +288,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -338,139 +335,96 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		05F9D57BBFB12E1DEB30E0DA /* [CP] Check Pods Manifest.lock */ = {
+		63AD67706152F027F3C7022C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LetsStretch-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		0A4FFE4DE2A3B5AEB55792F6 /* [CP] Copy Pods Resources */ = {
+		88ED7676A0A19AC8668E9365 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LetsStretch/Pods-LetsStretch-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		1D1BC03A4E45994D336A2F51 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LetsStretchUITests/Pods-LetsStretchUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		2AE633655FF35109319DA994 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-LetsStretch/Pods-LetsStretch-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LetsStretchTests/Pods-LetsStretchTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LetsStretch/Pods-LetsStretch-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		793D4E66E612817F70F7E334 /* [CP] Check Pods Manifest.lock */ = {
+		C3499B2F63D81612E9953781 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
+			inputFileListPaths = (
+			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LetsStretchTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		7B3735E67F941172AF9744AF /* [CP] Embed Pods Frameworks */ = {
+		FC5BECDBF7DA71274E6F915A /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LetsStretchUITests/Pods-LetsStretchUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ADB1A3BEB33AA48A17FBAB32 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+			inputFileListPaths = (
 			);
 			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LetsStretchTests/Pods-LetsStretchTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B834617A16C3B34885054B34 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-LetsStretch/Pods-LetsStretch-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		FF4A3E69FFF7FBD0D5D720EE /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-LetsStretchUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -588,6 +542,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -631,6 +586,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -638,7 +594,7 @@
 		};
 		E01FE0961F369BFD003ABDCA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C32C9F16AC2B46EF9F33239D /* Pods-LetsStretch.debug.xcconfig */;
+			baseConfigurationReference = DADFA529F91CE5F7202A4CBE /* Pods-LetsStretch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 56NQ7Z9L75;
@@ -647,13 +603,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "us.letshang.lets-stretch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		E01FE0971F369BFD003ABDCA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E8CF60480BA741C990C46873 /* Pods-LetsStretch.release.xcconfig */;
+			baseConfigurationReference = D16109B14AE4E7BDAA9DAAF5 /* Pods-LetsStretch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 56NQ7Z9L75;
@@ -662,13 +618,13 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "us.letshang.lets-stretch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 		E01FE0991F369BFD003ABDCA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5E9E41126A7630C8C271DABC /* Pods-LetsStretchTests.debug.xcconfig */;
+			baseConfigurationReference = 8C4056958956AF03D3EBE2AB /* Pods-LetsStretchTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -677,14 +633,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = letshang.LetsStretchTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LetsStretch.app/LetsStretch";
 			};
 			name = Debug;
 		};
 		E01FE09A1F369BFD003ABDCA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D54DF34C4BF5759ABE738AB4 /* Pods-LetsStretchTests.release.xcconfig */;
+			baseConfigurationReference = 8802F12F2AA9356BFCA262AB /* Pods-LetsStretchTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -693,14 +649,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = letshang.LetsStretchTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LetsStretch.app/LetsStretch";
 			};
 			name = Release;
 		};
 		E01FE09C1F369BFD003ABDCA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4833A6BC4D6241E03D0B6A22 /* Pods-LetsStretchUITests.debug.xcconfig */;
+			baseConfigurationReference = DFCB45D27984135E7A7385F7 /* Pods-LetsStretchUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 56NQ7Z9L75;
@@ -708,14 +664,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = letshang.LetsStretchUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = LetsStretch;
 			};
 			name = Debug;
 		};
 		E01FE09D1F369BFD003ABDCA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 80343ED74E81BD5EED86A4E4 /* Pods-LetsStretchUITests.release.xcconfig */;
+			baseConfigurationReference = 461A1D4FD39EE536CDCB944D /* Pods-LetsStretchUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 56NQ7Z9L75;
@@ -723,7 +679,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = letshang.LetsStretchUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = LetsStretch;
 			};
 			name = Release;
