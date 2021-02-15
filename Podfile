@@ -11,7 +11,7 @@ target 'LetsStretch' do
   pod 'Firebase/Storage'
   pod 'SwiftyJSON'
   pod 'Kingfisher'
-  pod 'Firebase/AdMob'  
+  pod 'Google-Mobile-Ads-SDK'
 
   target 'LetsStretchTests' do
     inherit! :search_paths

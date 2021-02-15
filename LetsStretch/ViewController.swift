@@ -126,8 +126,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func loadAd(){
-        print("Google Mobile Ads SDK version: " + GADRequest.sdkVersion())
-        
         /* Setup the bannerview */
         bannerView.adUnitID = "ca-app-pub-8223005482588566/6902691958"
         bannerView.rootViewController = self
@@ -136,7 +134,5 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let request = GADRequest()
         bannerView.load(request)
     }
-
-
 }
 

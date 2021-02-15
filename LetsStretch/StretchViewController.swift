@@ -141,8 +141,6 @@ class StretchViewController: UIViewController, GADBannerViewDelegate {
         }
     }
     func loadAd(){
-        print("Google Mobile Ads SDK version: " + GADRequest.sdkVersion())
-        
         bannerView.delegate = self
         
         /* Setup the bannerview */
@@ -158,12 +156,4 @@ class StretchViewController: UIViewController, GADBannerViewDelegate {
     func adViewDidReceiveAd(_ bannerView: GADBannerView) {
         print("adViewDidReceiveAd")
     }
-    
-    /// Tells the delegate an ad request failed.
-    func adView(_ bannerView: GADBannerView,
-                didFailToReceiveAdWithError error: GADRequestError) {
-        print("adView:didFailToReceiveAdWithError: \(error.localizedDescription)")
-    }
-
-
 }

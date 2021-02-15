@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8Kh-NZ-RcR">
-    <device id="retina4_0" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8Kh-NZ-RcR">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -39,7 +36,7 @@
                                         </constraints>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="66" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3sr-Fg-A11">
-                                        <rect key="frame" x="0.0" y="184" width="320" height="334"/>
+                                        <rect key="frame" x="0.0" y="184" width="320" height="384"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="RoutineCell" rowHeight="66" id="9Mg-AB-BY7" customClass="RoutineCell" customModule="LetsStretch" customModuleProvider="target">
@@ -50,14 +47,14 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="standing_yoga_stretch" translatesAutoresizingMaskIntoConstraints="NO" id="rOg-4p-2t8">
-                                                            <rect key="frame" x="24" y="9" width="48" height="48"/>
+                                                            <rect key="frame" x="31" y="9" width="48" height="48"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="48" id="OkF-Kl-MdZ"/>
                                                                 <constraint firstAttribute="width" constant="48" id="xnz-Pu-Qmi"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="routine" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Myf-h8-Cxw">
-                                                            <rect key="frame" x="88" y="23" width="208" height="21"/>
+                                                            <rect key="frame" x="95" y="23" width="194" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -82,8 +79,8 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="z2w-E6-2EC"/>
                                         </connections>
                                     </tableView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N8W-1W-3kM" customClass="GADBannerView">
-                                        <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N8W-1W-3kM" customClass="GADBannerView">
+                                        <rect key="frame" x="0.0" y="568" width="320" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Z6j-AB-8Bj"/>
@@ -134,7 +131,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bIj-Yd-0Ss">
-                                <rect key="frame" x="16" y="20" width="288" height="548"/>
+                                <rect key="frame" x="16" y="0.0" width="288" height="568"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAl-fu-dbY">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="40"/>
@@ -161,10 +158,10 @@
                                         </constraints>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8nX-QD-8qs" userLabel="TimeView">
-                                        <rect key="frame" x="0.0" y="390" width="288" height="108"/>
+                                        <rect key="frame" x="0.0" y="390" width="288" height="178"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="eHh-2T-dZs">
-                                                <rect key="frame" x="123" y="29" width="42" height="50.5"/>
+                                                <rect key="frame" x="123" y="64" width="42" height="50.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ngF-zx-jCN" userLabel="timeLabel">
                                                         <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
@@ -182,14 +179,14 @@
                                                 </subviews>
                                             </stackView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bV6-JE-91h">
-                                                <rect key="frame" x="256" y="39" width="32" height="30"/>
+                                                <rect key="frame" x="256" y="74" width="32" height="30"/>
                                                 <state key="normal" title="Next"/>
                                                 <connections>
                                                     <action selector="nextButtonClicked:" destination="LZH-g5-ml4" eventType="touchUpInside" id="4cE-3i-xdR"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vTl-fZ-bqy">
-                                                <rect key="frame" x="0.0" y="44.5" width="31" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="79" width="31" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -205,8 +202,8 @@
                                             <constraint firstAttribute="trailing" secondItem="bV6-JE-91h" secondAttribute="trailing" id="v7c-3D-Cih"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w1R-hk-ohH" customClass="GADBannerView">
-                                        <rect key="frame" x="0.0" y="498" width="288" height="50"/>
+                                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w1R-hk-ohH" customClass="GADBannerView">
+                                        <rect key="frame" x="0.0" y="568" width="288" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="iNP-iC-Cst"/>
@@ -246,7 +243,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8Kh-NZ-RcR" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hG8-GJ-GfF">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -261,6 +258,6 @@
     </scenes>
     <resources>
         <image name="standing_yoga_stretch" width="64" height="64"/>
-        <image name="stretching_photo250height" width="201" height="107"/>
+        <image name="stretching_photo250height" width="201.5" height="107.5"/>
     </resources>
 </document>

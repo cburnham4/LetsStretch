@@ -19,7 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         
         // Initialize the Google Mobile Ads SDK.
-        GADMobileAds.configure(withApplicationID: "ca-app-pub-8223005482588566~3155018635")
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
         
         return true
     }
