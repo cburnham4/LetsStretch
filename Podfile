@@ -6,7 +6,7 @@ target 'LetsStretch' do
   use_frameworks!
 
   # Pods for LetsStretch
-  pod 'Firebase/Core'
+  pod 'Firebase/Analytics'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'SwiftyJSON'
