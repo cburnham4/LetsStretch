@@ -135,4 +135,3 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         bannerView.load(request)
     }
 }
-
