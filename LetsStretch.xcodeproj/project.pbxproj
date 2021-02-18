@@ -20,11 +20,9 @@
 		E01FE0911F369BFD003ABDCA /* LetsStretchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01FE0901F369BFD003ABDCA /* LetsStretchUITests.swift */; };
 		E01FE09F1F369ED8003ABDCA /* RoutineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01FE09E1F369ED8003ABDCA /* RoutineCell.swift */; };
 		E01FE0A11F36B1B3003ABDCA /* ApiObjects.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01FE0A01F36B1B3003ABDCA /* ApiObjects.swift */; };
-		E01FE0A31F36B910003ABDCA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E01FE0A21F36B910003ABDCA /* GoogleService-Info.plist */; };
-		E01FE0A41F36B910003ABDCA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E01FE0A21F36B910003ABDCA /* GoogleService-Info.plist */; };
-		E01FE0A51F36B910003ABDCA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E01FE0A21F36B910003ABDCA /* GoogleService-Info.plist */; };
 		E01FE0A81F36BA42003ABDCA /* APIRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01FE0A71F36BA42003ABDCA /* APIRequests.swift */; };
 		E01FE0AA1F36C458003ABDCA /* StretchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01FE0A91F36C458003ABDCA /* StretchViewController.swift */; };
+		E082C46B25DEAC6C009661FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E082C46A25DEAC6C009661FF /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,9 +66,9 @@
 		E01FE0921F369BFD003ABDCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E01FE09E1F369ED8003ABDCA /* RoutineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutineCell.swift; sourceTree = "<group>"; };
 		E01FE0A01F36B1B3003ABDCA /* ApiObjects.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiObjects.swift; sourceTree = "<group>"; };
-		E01FE0A21F36B910003ABDCA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E01FE0A71F36BA42003ABDCA /* APIRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequests.swift; sourceTree = "<group>"; };
 		E01FE0A91F36C458003ABDCA /* StretchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StretchViewController.swift; sourceTree = "<group>"; };
+		E082C46A25DEAC6C009661FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		ED2551CEE8C9DD01328263B9 /* Pods_LetsStretch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LetsStretch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F18620D9210CE5F224B51266 /* Pods-LetsStretchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsStretchUITests.release.xcconfig"; path = "Target Support Files/Pods-LetsStretchUITests/Pods-LetsStretchUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -184,7 +182,7 @@
 		E01FE0A61F36BA16003ABDCA /* helpers */ = {
 			isa = PBXGroup;
 			children = (
-				E01FE0A21F36B910003ABDCA /* GoogleService-Info.plist */,
+				E082C46A25DEAC6C009661FF /* GoogleService-Info.plist */,
 				E01FE0701F369BFD003ABDCA /* AppDelegate.swift */,
 				E01FE0771F369BFD003ABDCA /* Assets.xcassets */,
 				E01FE0791F369BFD003ABDCA /* LaunchScreen.storyboard */,
@@ -260,7 +258,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0830;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Carl Burnham";
 				TargetAttributes = {
 					E01FE06C1F369BFD003ABDCA = {
@@ -309,7 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E01FE07B1F369BFD003ABDCA /* LaunchScreen.storyboard in Resources */,
-				E01FE0A31F36B910003ABDCA /* GoogleService-Info.plist in Resources */,
+				E082C46B25DEAC6C009661FF /* GoogleService-Info.plist in Resources */,
 				E01FE0781F369BFD003ABDCA /* Assets.xcassets in Resources */,
 				E01FE0761F369BFD003ABDCA /* Main.storyboard in Resources */,
 			);
@@ -319,7 +317,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E01FE0A41F36B910003ABDCA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,7 +324,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E01FE0A51F36B910003ABDCA /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -514,21 +510,31 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -551,9 +557,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -566,21 +573,31 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -597,8 +614,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 5.0;
@@ -612,12 +630,12 @@
 			baseConfigurationReference = 6C74BD43119908FAF6620A71 /* Pods-LetsStretch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 56NQ7Z9L75;
 				INFOPLIST_FILE = LetsStretch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.41;
+				MARKETING_VERSION = 1.45;
 				PRODUCT_BUNDLE_IDENTIFIER = "us.letshang.lets-stretch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -629,12 +647,12 @@
 			baseConfigurationReference = DB8D2B33F1515D0CBE468A3D /* Pods-LetsStretch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 8;
+				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 56NQ7Z9L75;
 				INFOPLIST_FILE = LetsStretch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				MARKETING_VERSION = 1.41;
+				MARKETING_VERSION = 1.45;
 				PRODUCT_BUNDLE_IDENTIFIER = "us.letshang.lets-stretch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

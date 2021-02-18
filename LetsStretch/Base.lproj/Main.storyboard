@@ -89,10 +89,11 @@
                                     <constraint firstItem="aRr-co-cHW" firstAttribute="leading" secondItem="er6-0n-yOp" secondAttribute="leading" id="Xog-cz-Pwq"/>
                                 </constraints>
                             </stackView>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N8W-1W-3kM" customClass="GADBannerView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N8W-1W-3kM" customClass="GADBannerView">
                                 <rect key="frame" x="0.0" y="518" width="320" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" constant="320" id="JFz-nP-4VD"/>
                                     <constraint firstAttribute="height" constant="50" id="Z6j-AB-8Bj"/>
                                 </constraints>
                             </view>
@@ -100,17 +101,16 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="er6-0n-yOp" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="CGc-1D-bDv"/>
-                            <constraint firstAttribute="trailing" secondItem="N8W-1W-3kM" secondAttribute="trailing" id="IHD-PH-l0P"/>
                             <constraint firstItem="er6-0n-yOp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="JeB-4F-H0S"/>
                             <constraint firstAttribute="trailing" secondItem="er6-0n-yOp" secondAttribute="trailing" id="QlC-ez-eEY"/>
-                            <constraint firstItem="N8W-1W-3kM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="mkw-6f-DDN"/>
+                            <constraint firstItem="N8W-1W-3kM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eVp-S7-hyG"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="N8W-1W-3kM" secondAttribute="bottom" id="wwa-ii-9YF"/>
                             <constraint firstItem="N8W-1W-3kM" firstAttribute="top" secondItem="er6-0n-yOp" secondAttribute="bottom" id="zSC-cw-9w3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="FrF-lj-eX3"/>
                     <connections>
-                        <outlet property="bannerView" destination="N8W-1W-3kM" id="NPm-p6-Bge"/>
+                        <outlet property="bannerView" destination="N8W-1W-3kM" id="Cuy-Ve-hrT"/>
                         <outlet property="tableView" destination="3sr-Fg-A11" id="mT8-rI-8BB"/>
                     </connections>
                 </viewController>
@@ -204,7 +204,7 @@
                                     </view>
                                 </subviews>
                             </stackView>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w1R-hk-ohH" customClass="GADBannerView">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w1R-hk-ohH" customClass="GADBannerView">
                                 <rect key="frame" x="16" y="518" width="288" height="50"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>

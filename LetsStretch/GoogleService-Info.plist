@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>AD_UNIT_ID_FOR_BANNER_TEST</key>
-	<string>ca-app-pub-3940256099942544/2934735716</string>
-	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
-	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
 	<string>280000227250-74bd82h3j3mqamg0g7kkseuaoacm3id4.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
@@ -23,18 +19,20 @@
 	<key>STORAGE_BUCKET</key>
 	<string>lets-stretch.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
-	<true/>
+	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<false/>
+	<true></true>
 	<key>IS_GCM_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:280000227250:ios:1f47be6e58d196ca</string>
 	<key>DATABASE_URL</key>
 	<string>https://lets-stretch.firebaseio.com</string>
+	<key>ADMOB_APP_ID</key>
+	<string>ca-app-pub-8223005482588566~3155018635</string>
 </dict>
 </plist>

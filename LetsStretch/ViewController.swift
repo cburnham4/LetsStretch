@@ -63,9 +63,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         /* Save the new date */
         defaults.setValue(dateUpdated, forKey: "DateUpdated")
-        
-        
-
     }
     
     func getLocalData(){
@@ -121,8 +118,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let stretchViewController = self.storyboard?.instantiateViewController(withIdentifier: "StretchViewController") as! StretchViewController
         stretchViewController.routine = routine
         
-        self.navigationController?.pushViewController(stretchViewController, animated: true)
-        
+        navigationController?.pushViewController(stretchViewController, animated: true)
     }
     
     func loadAd(){
