@@ -1,6 +1,0 @@
-framework module Pods_LetsStretchTests {
-  umbrella header "Pods-LetsStretchTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

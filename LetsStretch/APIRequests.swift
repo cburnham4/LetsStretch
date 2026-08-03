@@ -8,7 +8,6 @@
 
 import Foundation
 import FirebaseDatabase
-import SwiftyJSON
 
 class APIRequests{
     

@@ -7,20 +7,18 @@
 //
 
 import UIKit
-import Firebase
+import FirebaseCore
+import GoogleMobileAds
 
-@UIApplicationMain
+@main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        AppTheme.applyGlobalAppearance()
         FirebaseApp.configure()
-        
-        // Initialize the Google Mobile Ads SDK.
-        GADMobileAds.sharedInstance().start(completionHandler: nil)
-        
+        MobileAds.shared.start(completionHandler: nil)
         return true
     }
 
@@ -48,4 +46,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 }
-

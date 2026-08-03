@@ -3,14 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4631119CC21DE312CFC0C120 /* Pods_LetsStretchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BE86681D573F43150788BF3 /* Pods_LetsStretchUITests.framework */; };
-		8A03F0AC7883346D3E5BEA1D /* Pods_LetsStretchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E01EC6C746803DCB4303423 /* Pods_LetsStretchTests.framework */; };
-		A6AA8E5244E57865E998E36F /* Pods_LetsStretch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2551CEE8C9DD01328263B9 /* Pods_LetsStretch.framework */; };
 		E01C2D541F422941001118F2 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01C2D531F422941001118F2 /* Utils.swift */; };
+		E0AD000130200400002FF7B6 /* AdBannerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AD000030200400002FF7B6 /* AdBannerHelper.swift */; };
+		E0AD000330200500002FF7B6 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AD000230200500002FF7B6 /* AppTheme.swift */; };
 		E01FE0711F369BFD003ABDCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01FE0701F369BFD003ABDCA /* AppDelegate.swift */; };
 		E01FE0731F369BFD003ABDCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01FE0721F369BFD003ABDCA /* ViewController.swift */; };
 		E01FE0761F369BFD003ABDCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E01FE0741F369BFD003ABDCA /* Main.storyboard */; };
@@ -23,6 +22,13 @@
 		E01FE0A81F36BA42003ABDCA /* APIRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01FE0A71F36BA42003ABDCA /* APIRequests.swift */; };
 		E01FE0AA1F36C458003ABDCA /* StretchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01FE0A91F36C458003ABDCA /* StretchViewController.swift */; };
 		E082C46B25DEAC6C009661FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E082C46A25DEAC6C009661FF /* GoogleService-Info.plist */; };
+		E0DC8EF23020021A002FF7B6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E0DC8EF13020021A002FF7B6 /* FirebaseAnalytics */; };
+		E0DC8EF43020021A002FF7B6 /* FirebaseAnalyticsCore in Frameworks */ = {isa = PBXBuildFile; productRef = E0DC8EF33020021A002FF7B6 /* FirebaseAnalyticsCore */; };
+		E0DC8EF63020021A002FF7B6 /* FirebaseAnalyticsIdentitySupport in Frameworks */ = {isa = PBXBuildFile; productRef = E0DC8EF53020021A002FF7B6 /* FirebaseAnalyticsIdentitySupport */; };
+		E0DC8EF83020021A002FF7B6 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = E0DC8EF73020021A002FF7B6 /* FirebaseCore */; };
+		E0DC8EFA3020021A002FF7B6 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = E0DC8EF93020021A002FF7B6 /* FirebaseDatabase */; };
+		E0DC8EFE30200340002FF7B6 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = E0DC8EFD30200340002FF7B6 /* GoogleMobileAds */; };
+		E0DC8F01302003C7002FF7B6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E0DC8F00302003C7002FF7B6 /* Kingfisher */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,14 +49,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		40B4A0BAE19E486C28123376 /* Pods-LetsStretchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsStretchTests.debug.xcconfig"; path = "Target Support Files/Pods-LetsStretchTests/Pods-LetsStretchTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5BE86681D573F43150788BF3 /* Pods_LetsStretchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LetsStretchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C74BD43119908FAF6620A71 /* Pods-LetsStretch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsStretch.debug.xcconfig"; path = "Target Support Files/Pods-LetsStretch/Pods-LetsStretch.debug.xcconfig"; sourceTree = "<group>"; };
-		6E01EC6C746803DCB4303423 /* Pods_LetsStretchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LetsStretchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AEA88AA91D810CB2F89E584D /* Pods-LetsStretchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsStretchTests.release.xcconfig"; path = "Target Support Files/Pods-LetsStretchTests/Pods-LetsStretchTests.release.xcconfig"; sourceTree = "<group>"; };
-		B2839E8DD1AE59623789FED6 /* Pods-LetsStretchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsStretchUITests.debug.xcconfig"; path = "Target Support Files/Pods-LetsStretchUITests/Pods-LetsStretchUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		DB8D2B33F1515D0CBE468A3D /* Pods-LetsStretch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsStretch.release.xcconfig"; path = "Target Support Files/Pods-LetsStretch/Pods-LetsStretch.release.xcconfig"; sourceTree = "<group>"; };
 		E01C2D531F422941001118F2 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		E0AD000030200400002FF7B6 /* AdBannerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerHelper.swift; sourceTree = "<group>"; };
+		E0AD000230200500002FF7B6 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		E01FE06D1F369BFD003ABDCA /* LetsStretch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsStretch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01FE0701F369BFD003ABDCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E01FE0721F369BFD003ABDCA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -69,8 +70,6 @@
 		E01FE0A71F36BA42003ABDCA /* APIRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequests.swift; sourceTree = "<group>"; };
 		E01FE0A91F36C458003ABDCA /* StretchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StretchViewController.swift; sourceTree = "<group>"; };
 		E082C46A25DEAC6C009661FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		ED2551CEE8C9DD01328263B9 /* Pods_LetsStretch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LetsStretch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F18620D9210CE5F224B51266 /* Pods-LetsStretchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LetsStretchUITests.release.xcconfig"; path = "Target Support Files/Pods-LetsStretchUITests/Pods-LetsStretchUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +77,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6AA8E5244E57865E998E36F /* Pods_LetsStretch.framework in Frameworks */,
+				E0DC8EFE30200340002FF7B6 /* GoogleMobileAds in Frameworks */,
+				E0DC8EFA3020021A002FF7B6 /* FirebaseDatabase in Frameworks */,
+				E0DC8F01302003C7002FF7B6 /* Kingfisher in Frameworks */,
+				E0DC8EF23020021A002FF7B6 /* FirebaseAnalytics in Frameworks */,
+				E0DC8EF43020021A002FF7B6 /* FirebaseAnalyticsCore in Frameworks */,
+				E0DC8EF83020021A002FF7B6 /* FirebaseCore in Frameworks */,
+				E0DC8EF63020021A002FF7B6 /* FirebaseAnalyticsIdentitySupport in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,7 +91,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A03F0AC7883346D3E5BEA1D /* Pods_LetsStretchTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,45 +98,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4631119CC21DE312CFC0C120 /* Pods_LetsStretchUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0EFCA6180ACF824E5BDDFCF1 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				ED2551CEE8C9DD01328263B9 /* Pods_LetsStretch.framework */,
-				6E01EC6C746803DCB4303423 /* Pods_LetsStretchTests.framework */,
-				5BE86681D573F43150788BF3 /* Pods_LetsStretchUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		21DBD757EF0C7793DF317CFE /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				6C74BD43119908FAF6620A71 /* Pods-LetsStretch.debug.xcconfig */,
-				DB8D2B33F1515D0CBE468A3D /* Pods-LetsStretch.release.xcconfig */,
-				40B4A0BAE19E486C28123376 /* Pods-LetsStretchTests.debug.xcconfig */,
-				AEA88AA91D810CB2F89E584D /* Pods-LetsStretchTests.release.xcconfig */,
-				B2839E8DD1AE59623789FED6 /* Pods-LetsStretchUITests.debug.xcconfig */,
-				F18620D9210CE5F224B51266 /* Pods-LetsStretchUITests.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		E01FE0641F369BFD003ABDCA = {
 			isa = PBXGroup;
 			children = (
 				E01FE06F1F369BFD003ABDCA /* LetsStretch */,
 				E01FE0841F369BFD003ABDCA /* LetsStretchTests */,
 				E01FE08F1F369BFD003ABDCA /* LetsStretchUITests */,
+				E0DC8EFC30200340002FF7B6 /* Frameworks */,
 				E01FE06E1F369BFD003ABDCA /* Products */,
-				21DBD757EF0C7793DF317CFE /* Pods */,
-				0EFCA6180ACF824E5BDDFCF1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,6 +136,8 @@
 				E01FE0A71F36BA42003ABDCA /* APIRequests.swift */,
 				E01FE0A91F36C458003ABDCA /* StretchViewController.swift */,
 				E01C2D531F422941001118F2 /* Utils.swift */,
+				E0AD000030200400002FF7B6 /* AdBannerHelper.swift */,
+				E0AD000230200500002FF7B6 /* AppTheme.swift */,
 			);
 			path = LetsStretch;
 			sourceTree = "<group>";
@@ -191,6 +172,13 @@
 			name = helpers;
 			sourceTree = "<group>";
 		};
+		E0DC8EFC30200340002FF7B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -198,17 +186,24 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E01FE0951F369BFD003ABDCA /* Build configuration list for PBXNativeTarget "LetsStretch" */;
 			buildPhases = (
-				942852D026CA392078F33149 /* [CP] Check Pods Manifest.lock */,
 				E01FE0691F369BFD003ABDCA /* Sources */,
 				E01FE06A1F369BFD003ABDCA /* Frameworks */,
 				E01FE06B1F369BFD003ABDCA /* Resources */,
-				A0A1AD59598C4EF29F77B97F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = LetsStretch;
+			packageProductDependencies = (
+				E0DC8EF13020021A002FF7B6 /* FirebaseAnalytics */,
+				E0DC8EF33020021A002FF7B6 /* FirebaseAnalyticsCore */,
+				E0DC8EF53020021A002FF7B6 /* FirebaseAnalyticsIdentitySupport */,
+				E0DC8EF73020021A002FF7B6 /* FirebaseCore */,
+				E0DC8EF93020021A002FF7B6 /* FirebaseDatabase */,
+				E0DC8EFD30200340002FF7B6 /* GoogleMobileAds */,
+				E0DC8F00302003C7002FF7B6 /* Kingfisher */,
+			);
 			productName = LetsStretch;
 			productReference = E01FE06D1F369BFD003ABDCA /* LetsStretch.app */;
 			productType = "com.apple.product-type.application";
@@ -217,7 +212,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E01FE0981F369BFD003ABDCA /* Build configuration list for PBXNativeTarget "LetsStretchTests" */;
 			buildPhases = (
-				7F0FCA83E4A325F63CBFF41B /* [CP] Check Pods Manifest.lock */,
 				E01FE07D1F369BFD003ABDCA /* Sources */,
 				E01FE07E1F369BFD003ABDCA /* Frameworks */,
 				E01FE07F1F369BFD003ABDCA /* Resources */,
@@ -236,7 +230,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = E01FE09B1F369BFD003ABDCA /* Build configuration list for PBXNativeTarget "LetsStretchUITests" */;
 			buildPhases = (
-				5FACF98A9F76797E464BDD90 /* [CP] Check Pods Manifest.lock */,
 				E01FE0881F369BFD003ABDCA /* Sources */,
 				E01FE0891F369BFD003ABDCA /* Frameworks */,
 				E01FE08A1F369BFD003ABDCA /* Resources */,
@@ -257,8 +250,9 @@
 		E01FE0651F369BFD003ABDCA /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 1240;
+				LastUpgradeCheck = 2620;
 				ORGANIZATIONNAME = "Carl Burnham";
 				TargetAttributes = {
 					E01FE06C1F369BFD003ABDCA = {
@@ -281,15 +275,19 @@
 				};
 			};
 			buildConfigurationList = E01FE0681F369BFD003ABDCA /* Build configuration list for PBXProject "LetsStretch" */;
-			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
 				en,
 				Base,
 			);
 			mainGroup = E01FE0641F369BFD003ABDCA;
+			packageReferences = (
+				E0DC8EF03020021A002FF7B6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				E0DC8EFB3020032E002FF7B6 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */,
+				E0DC8EFF302003C7002FF7B6 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = E01FE06E1F369BFD003ABDCA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -329,117 +327,6 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		5FACF98A9F76797E464BDD90 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LetsStretchUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		7F0FCA83E4A325F63CBFF41B /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LetsStretchTests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		942852D026CA392078F33149 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-LetsStretch-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A0A1AD59598C4EF29F77B97F /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-LetsStretch/Pods-LetsStretch-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/FirebaseCore/FirebaseCore.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseCoreDiagnostics/FirebaseCoreDiagnostics.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseDatabase/FirebaseDatabase.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseInstallations/FirebaseInstallations.framework",
-				"${BUILT_PRODUCTS_DIR}/FirebaseStorage/FirebaseStorage.framework",
-				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleDataTransport/GoogleDataTransport.framework",
-				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
-				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
-				"${BUILT_PRODUCTS_DIR}/PromisesObjC/FBLPromises.framework",
-				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
-				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
-				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCore.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseCoreDiagnostics.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseDatabase.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseInstallations.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FirebaseStorage.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleDataTransport.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBLPromises.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-LetsStretch/Pods-LetsStretch-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
 		E01FE0691F369BFD003ABDCA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -449,6 +336,8 @@
 				E01FE0A11F36B1B3003ABDCA /* ApiObjects.swift in Sources */,
 				E01FE0AA1F36C458003ABDCA /* StretchViewController.swift in Sources */,
 				E01C2D541F422941001118F2 /* Utils.swift in Sources */,
+				E0AD000130200400002FF7B6 /* AdBannerHelper.swift in Sources */,
+				E0AD000330200500002FF7B6 /* AppTheme.swift in Sources */,
 				E01FE0A81F36BA42003ABDCA /* APIRequests.swift in Sources */,
 				E01FE0711F369BFD003ABDCA /* AppDelegate.swift in Sources */,
 				E01FE09F1F369ED8003ABDCA /* RoutineCell.swift in Sources */,
@@ -557,7 +446,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
@@ -614,11 +503,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -627,14 +517,16 @@
 		};
 		E01FE0961F369BFD003ABDCA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C74BD43119908FAF6620A71 /* Pods-LetsStretch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 56NQ7Z9L75;
 				INFOPLIST_FILE = LetsStretch/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.45;
 				PRODUCT_BUNDLE_IDENTIFIER = "us.letshang.lets-stretch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -644,14 +536,16 @@
 		};
 		E01FE0971F369BFD003ABDCA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DB8D2B33F1515D0CBE468A3D /* Pods-LetsStretch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CURRENT_PROJECT_VERSION = 10;
 				DEVELOPMENT_TEAM = 56NQ7Z9L75;
 				INFOPLIST_FILE = LetsStretch/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.45;
 				PRODUCT_BUNDLE_IDENTIFIER = "us.letshang.lets-stretch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -661,13 +555,16 @@
 		};
 		E01FE0991F369BFD003ABDCA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40B4A0BAE19E486C28123376 /* Pods-LetsStretchTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 56NQ7Z9L75;
 				INFOPLIST_FILE = LetsStretchTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = letshang.LetsStretchTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -677,13 +574,16 @@
 		};
 		E01FE09A1F369BFD003ABDCA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AEA88AA91D810CB2F89E584D /* Pods-LetsStretchTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = 56NQ7Z9L75;
 				INFOPLIST_FILE = LetsStretchTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = letshang.LetsStretchTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -693,12 +593,15 @@
 		};
 		E01FE09C1F369BFD003ABDCA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B2839E8DD1AE59623789FED6 /* Pods-LetsStretchUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 56NQ7Z9L75;
 				INFOPLIST_FILE = LetsStretchUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = letshang.LetsStretchUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -708,12 +611,15 @@
 		};
 		E01FE09D1F369BFD003ABDCA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F18620D9210CE5F224B51266 /* Pods-LetsStretchUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 56NQ7Z9L75;
 				INFOPLIST_FILE = LetsStretchUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = letshang.LetsStretchUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -761,6 +667,71 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E0DC8EF03020021A002FF7B6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.17.0;
+			};
+		};
+		E0DC8EFB3020032E002FF7B6 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/googleads/swift-package-manager-google-mobile-ads.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 13.7.0;
+			};
+		};
+		E0DC8EFF302003C7002FF7B6 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.11.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E0DC8EF13020021A002FF7B6 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E0DC8EF03020021A002FF7B6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		E0DC8EF33020021A002FF7B6 /* FirebaseAnalyticsCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E0DC8EF03020021A002FF7B6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsCore;
+		};
+		E0DC8EF53020021A002FF7B6 /* FirebaseAnalyticsIdentitySupport */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E0DC8EF03020021A002FF7B6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsIdentitySupport;
+		};
+		E0DC8EF73020021A002FF7B6 /* FirebaseCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E0DC8EF03020021A002FF7B6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCore;
+		};
+		E0DC8EF93020021A002FF7B6 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E0DC8EF03020021A002FF7B6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		E0DC8EFD30200340002FF7B6 /* GoogleMobileAds */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E0DC8EFB3020032E002FF7B6 /* XCRemoteSwiftPackageReference "swift-package-manager-google-mobile-ads" */;
+			productName = GoogleMobileAds;
+		};
+		E0DC8F00302003C7002FF7B6 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E0DC8EFF302003C7002FF7B6 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E01FE0651F369BFD003ABDCA /* Project object */;
 }

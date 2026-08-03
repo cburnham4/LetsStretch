@@ -13,7 +13,7 @@ import GoogleMobileAds
 import AVFoundation
 
 
-class StretchViewController: UIViewController, GADBannerViewDelegate {
+class StretchViewController: UIViewController, BannerViewDelegate {
     
     /* Outlets */
     @IBOutlet weak var stretchNameLabel: UILabel!
@@ -22,7 +22,9 @@ class StretchViewController: UIViewController, GADBannerViewDelegate {
     @IBOutlet weak var timeLabel: UILabel!
     
     @IBOutlet weak var stretchNumLabel: UILabel!
-    @IBOutlet weak var bannerView: GADBannerView!
+    @IBOutlet weak var bannerContainer: UIView!
+    private var bannerView: BannerView?
+    private var didLoadAd = false
     /* Data */
     var stretches = [Stretch]()
     var routine: Routine?
@@ -39,13 +41,47 @@ class StretchViewController: UIViewController, GADBannerViewDelegate {
         super.viewDidLoad()
         
         self.stretchIndex = 0
+        applyStretchChrome()
         
-        loadAd()
         self.navigationController?.isNavigationBarHidden = false
         getStretches()
         startStretches()
         
         self.title = routine?.name
+    }
+
+    private func applyStretchChrome() {
+        view.backgroundColor = AppTheme.background
+        view.tintColor = AppTheme.accent
+        bannerContainer?.backgroundColor = AppTheme.background
+        timeLabel.superview?.backgroundColor = AppTheme.background
+
+        stretchNameLabel.font = .systemFont(ofSize: 28, weight: .bold)
+        stretchNameLabel.textColor = AppTheme.ink
+
+        instructionLabel.font = .systemFont(ofSize: 16, weight: .regular)
+        instructionLabel.textColor = AppTheme.inkSecondary
+        instructionLabel.textAlignment = .left
+
+        timeLabel.font = .monospacedDigitSystemFont(ofSize: 44, weight: .bold)
+        timeLabel.textColor = AppTheme.accent
+
+        stretchNumLabel.font = .systemFont(ofSize: 15, weight: .semibold)
+        stretchNumLabel.textColor = AppTheme.inkSecondary
+
+        stretchImage.backgroundColor = AppTheme.surface
+        stretchImage.layer.cornerRadius = 20
+        stretchImage.layer.cornerCurve = .continuous
+        stretchImage.clipsToBounds = true
+        stretchImage.contentMode = .scaleAspectFit
+    }
+
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        if !didLoadAd {
+            didLoadAd = true
+            loadAd()
+        }
     }
 
     func getStretches(){
@@ -65,8 +101,7 @@ class StretchViewController: UIViewController, GADBannerViewDelegate {
             return
         }else{
             /* Request ad */
-            let request = GADRequest()
-            bannerView.load(request)
+            bannerView?.load(Request())
         }
         let stretch = stretches[stretchIndex]
         
@@ -140,20 +175,19 @@ class StretchViewController: UIViewController, GADBannerViewDelegate {
             sender.setTitle("Pause", for: .normal)
         }
     }
-    func loadAd(){
-        bannerView.delegate = self
-        
-        /* Setup the bannerview */
-        bannerView.adUnitID = "ca-app-pub-8223005482588566/2963446943"
-        bannerView.rootViewController = self
-        
-        /* Request the new ad */
-        let request = GADRequest()
-        bannerView.load(request)
+    func loadAd() {
+        bannerView = installBannerAd(
+            in: bannerContainer,
+            adUnitID: AdUnits.stretchBanner,
+            delegate: self
+        )
     }
     
-    /// Tells the delegate an ad request loaded an ad.
-    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
-        print("adViewDidReceiveAd")
+    func bannerViewDidReceiveAd(_ bannerView: BannerView) {
+        print("Stretch banner loaded")
+    }
+
+    func bannerView(_ bannerView: BannerView, didFailToReceiveAdWithError error: Error) {
+        print("Stretch banner failed: \(error.localizedDescription)")
     }
 }
