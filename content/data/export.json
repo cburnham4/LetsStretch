@@ -1,0 +1,231 @@
+{
+  "Routines": {
+    "Back Stretches": {
+      "Stretches": [
+        "Sit and Reach",
+        "Knee Press",
+        "Hamstring - Left",
+        "Hamstring - Right",
+        "Cobra Pose",
+        "Hare Pose",
+        "Cow Pose",
+        "Cat Pose"
+      ],
+      "downloadURL": "https://firebasestorage.googleapis.com/v0/b/lets-stretch.appspot.com/o/Routines%2Fsilhouette.png?alt=media&token=c5d69449-77cf-4fa0-97ab-8003c2e75f29",
+      "id": 99999
+    },
+    "Full Body": {
+      "Stretches": [
+        "Chair Pose",
+        "Simple Peacock",
+        "Warrior Pose - Left",
+        "Camel Pose",
+        "Warrior Pose - Right",
+        "Upward Table",
+        "Plank",
+        "Boat Pose"
+      ],
+      "downloadURL": "https://firebasestorage.googleapis.com/v0/b/lets-stretch.appspot.com/o/Routines%2Ffull_body_stretch.png?alt=media&token=cd2c3c12-ad2c-48ae-b986-bb1ab2ca247f"
+    },
+    "Leg Stretches": {
+      "Stretches": [
+        "Hamstring - Left",
+        "Hamstring - Right",
+        "Downward Dog",
+        "Warrior Pose - Left Foot",
+        "Warrior Pose - Right Foot"
+      ],
+      "downloadURL": "https://firebasestorage.googleapis.com/v0/b/lets-stretch.appspot.com/o/Routines%2Fstanding_yoga_stretch.png?alt=media&token=5872ff96-e750-4a35-833a-15a86289d9c1"
+    },
+    "Morning Stretches": {
+      "Stretches": [
+        "Forward Bend",
+        "Upper Back Release",
+        "Chair Pose",
+        "Side Stretch - Left",
+        "Side Stretch - Right",
+        "Downward Dog",
+        "Plank"
+      ],
+      "downloadURL": "https://firebasestorage.googleapis.com/v0/b/lets-stretch.appspot.com/o/Routines%2Fwake_up.png?alt=media&token=43bbd1c0-c336-4375-b8e1-0303497b7e01"
+    }
+  },
+  "Stretches": {
+    "Boat Pose": {
+      "downloadURL": "https://firebasestorage.googleapis.com/v0/b/lets-stretch.appspot.com/o/Stretches%2FBoat%20Pose.png?alt=media&token=07a8f643-5b5a-47af-bc6a-2389a617dec0",
+      "drawableIndex": 2130837638,
+      "instructions": "Sit straight. Press your hands against the floor behind your back and raise your legs. Balancing on your pelvic bones, straighten your arms in front of you at your shins' level. Try to keep your back straight.",
+      "name": "Boat Pose",
+      "time": 30
+    },
+    "Camel Pose": {
+      "downloadURL": "https://firebasestorage.googleapis.com/v0/b/lets-stretch.appspot.com/o/Stretches%2FCamel%20Pose.png?alt=media&token=55a3e249-d76e-4ecf-9ac5-5aa24f4d7f4a",
+      "drawableIndex": 2130837634,
+      "instructions": "Lift your thighs and pelvis up and forward while sitting on your heels or between feet. Press your palms against your feet and arch your back. Throw back your head",
+      "name": "Camel Pose",
+      "time": 30
+    },
+    "Cat Pose": {
+      "downloadURL": "https://firebasestorage.googleapis.com/v0/b/lets-stretch.appspot.com/o/Stretches%2FCat%20Pose.png?alt=media&token=3c6342d7-ca84-407d-8685-90fd4b753d42",
+      "drawableIndex": 2130837632,
+      "instructions": "Stand on all fours. Put your hands and knees at your hips' width. Round your back and hang your head down.",
+      "name": "Cat Pose",
+      "time": 15
+    },
+    "Chair Pose": {
+      "downloadURL": "https://firebasestorage.googleapis.com/v0/b/lets-stretch.appspot.com/o/Stretches%2FChair%20Pose.png?alt=media&token=a38835ac-6e0d-4652-b995-2eb8cd662b4f",
+      "drawableIndex": 2130837640,
+      "instructions": "Stand up straight, your feet shoulder-width apart. Stretch your arms forward. Squat down as low as you can without lifting your heels. Keep your back straight and your torso bent a bit forward.",
+      "name": "Chair Pose",
+      "time": 30
+    },
+    "Cobra Pose": {
+      "downloadURL": "https://firebasestorage.googleapis.com/v0/b/lets-stretch.appspot.com/o/Stretches%2FCobra%20Pose.png?alt=media&token=e7799b5d-3f49-487e-aaeb-92b5c93bfb6a",
+      "drawableIndex": 2130837675,
+      "instructions": "Lie prone on the floor. Stretch your legs back, tops of the feet on the floor. Spread your hands on the floor under your shoulders. Hug the elbows back into your body.",
+      "name": "Cobra Pose",
+      "time": 30
+    },
+    "Cow Pose": {
+      "downloadURL": "https://firebasestorage.googleapis.com/v0/b/lets-stretch.appspot.com/o/Stretches%2FCow%20Pose.png?alt=media&token=767d4a30-01ae-4ab6-8f1c-62a0385c6dce",
+      "drawableIndex": 2130837632,
+      "instructions": "While on all fours, lift your pelvis and chest toward the ceiling, so that your stomach moves toward the floor. Lift your head",
+      "name": "Cow Pose",
+      "time": 15
+    },
+    "Downward Dog": {
+      "downloadURL": "https://firebasestorage.googleapis.com/v0/b/lets-stretch.appspot.com/o/Stretches%2FDownward%20Dog.png?alt=media&token=ae10a11f-0f45-41f7-9e4b-e606ba8a82fc",
+      "drawableIndex": 2130837627,
+      "instructions": "Go on all fours then push with your hands and straighten your legs.  Extend your pelvic bones up and heels down.",
+      "name": "Downward Dog",
+      "time": 30
+    },
+    "Forward Bend": {
+      "downloadURL": "https://firebasestorage.googleapis.com/v0/b/lets-stretch.appspot.com/o/Stretches%2FForward%20Bend.png?alt=media&token=6a9f0c89-bdcf-40f9-a49a-ad22200e8878",
+      "drawableIndex": 2130837628,
+      "instructions": "Stand up straight. Bend forward toward the ground.",
+      "name": "Forward Bend",
+      "time": 30
+    },
+    "Hamstring - Left": {
+      "downloadURL": "https://firebasestorage.googleapis.com/v0/b/lets-stretch.appspot.com/o/Stretches%2FHamstring%20-%20Left.png?alt=media&token=8b82a954-f81f-4176-934a-7e146c3e9fb9",
+      "drawableIndex": 2130837676,
+      "instructions": "Lie on your back. Raise your left leg as high as you can keeping your pelvis flat on the ground. Hold your foot and encourage the leg to move toward your head. Flex your foot to stretch your calf too.",
+      "name": "Hamstring - Left",
+      "time": 15
+    },
+    "Hamstring - Right": {
+      "downloadURL": "https://firebasestorage.googleapis.com/v0/b/lets-stretch.appspot.com/o/Stretches%2FHamstring%20-%20Right.png?alt=media&token=c963d68b-bcb0-4673-9d79-3449685a61a7",
+      "drawableIndex": 2130837676,
+      "instructions": "Lie on your back. Raise your right leg as high as you can keeping your pelvis flat on the ground. Hold your foot and encourage the leg to move toward your head. Flex your foot to stretch your calf too.",
+      "name": "Hamstring - Right",
+      "time": 15
+    },
+    "Hare Pose": {
+      "downloadURL": "https://firebasestorage.googleapis.com/v0/b/lets-stretch.appspot.com/o/Stretches%2FHare%20Pose.png?alt=media&token=37e7e7c2-e40e-4176-83ff-95f7c39b27a0",
+      "drawableIndex": 2130837633,
+      "instructions": "Lower your head as you sit on your heels. Stretch your arms forward on the floor.",
+      "name": "Hare Pose",
+      "time": 20
+    },
+    "Knee Press": {
+      "downloadURL": "https://firebasestorage.googleapis.com/v0/b/lets-stretch.appspot.com/o/Stretches%2FKnee%20Press.png?alt=media&token=999eeae5-18d9-4840-aa45-5ff2cc0d2ac2",
+      "drawableIndex": 2130837630,
+      "instructions": "Lie on your back. Bend both legs and, helping with your hands, draw your thighs to your stomach as you exhale.",
+      "name": "Knee Press",
+      "time": 30
+    },
+    "Left Trianlge Pose": {
+      "downloadURL": "https://firebasestorage.googleapis.com/v0/b/lets-stretch.appspot.com/o/Stretches%2FLeft%20Trianlge%20Pose.png?alt=media&token=187c7e04-fa1f-4d5d-ab08-d874b0a51821",
+      "drawableIndex": 2130837687,
+      "instructions": "Put your left hand on the left leg or floor as you reach your edge with a straight back. Try not to arch your torso. Keep your legs straight. Raise your right hand. Try to look up at your palm.",
+      "name": "Left Trianlge Pose",
+      "time": 15
+    },
+    "Plank": {
+      "downloadURL": "https://firebasestorage.googleapis.com/v0/b/lets-stretch.appspot.com/o/Stretches%2FPlank.png?alt=media&token=83803827-5ec3-4585-b4ef-af5c6df0f23f",
+      "drawableIndex": 2130837625,
+      "instructions": "Go into push up position. Hold that position or drop to elbows",
+      "name": "Plank",
+      "time": 30
+    },
+    "Right Trianlge Pose": {
+      "downloadURL": "https://firebasestorage.googleapis.com/v0/b/lets-stretch.appspot.com/o/Stretches%2FRight%20Trianlge%20Pose.png?alt=media&token=2ae1de50-d43d-4724-a1e5-084129f90c06",
+      "drawableIndex": 2130837647,
+      "instructions": "Put your right hand on the right leg or floor as you reach your edge with a straight back. Try not to arch your torso. Keep your legs straight. Raise your left hand. Try to look up at your palm.",
+      "name": "Right Trianlge Pose",
+      "time": 15
+    },
+    "Side Stretch - Left": {
+      "downloadURL": "https://firebasestorage.googleapis.com/v0/b/lets-stretch.appspot.com/o/Stretches%2FSide%20Stretch%20-%20Left.png?alt=media&token=60c10237-f424-4583-a76c-98371433f592",
+      "drawableIndex": 2130837664,
+      "instructions": "While standing, reach your arms overhead and lock hands. Bend to the side to strech. Switch direction half way.",
+      "name": "Side Stretch - Left",
+      "time": 20
+    },
+    "Side Stretch - Right": {
+      "downloadURL": "https://firebasestorage.googleapis.com/v0/b/lets-stretch.appspot.com/o/Stretches%2FSide%20Stretch%20-%20Right.png?alt=media&token=aa50fff6-a3ee-4655-ac04-baeab68fcc37",
+      "drawableIndex": 2130837664,
+      "instructions": "While standing, reach your arms overhead and lock hands. Bend to the side to strech. Switch direction half way.",
+      "name": "Side Stretch - Right",
+      "time": 20
+    },
+    "Simple Peacock": {
+      "downloadURL": "https://firebasestorage.googleapis.com/v0/b/lets-stretch.appspot.com/o/Stretches%2FSimple%20Peacock.png?alt=media&token=fa954cde-8b08-46ef-a7e2-c6e16b67be53",
+      "drawableIndex": 2130837673,
+      "instructions": " Stand up straight with your feet at your hips width. Clasp your hands behind your back. Move your arms away from your back with your shoulder blades pointing at each other. Arch back a little and start bending forward.",
+      "name": "Simple Peacock",
+      "time": 30
+    },
+    "Sit and Reach": {
+      "downloadURL": "https://firebasestorage.googleapis.com/v0/b/lets-stretch.appspot.com/o/Stretches%2FSit%20and%20Reach.png?alt=media&token=71040f8e-6b63-48be-b635-54e7e82b1e98",
+      "drawableIndex": 2130837648,
+      "instructions": "Sit with your legs straight. Bend forward reaching toward your feet",
+      "name": "Sit and Reach",
+      "time": 30
+    },
+    "Upper Back Release": {
+      "downloadURL": "https://firebasestorage.googleapis.com/v0/b/lets-stretch.appspot.com/o/Stretches%2FUpper%20Back%20Release.png?alt=media&token=4e7cc29b-22f4-4e37-a27e-07e2a725d68f",
+      "drawableIndex": 2130837669,
+      "instructions": "While kneeling or standing, reach your arms out locking your hands. Round upper back and keep arms straight",
+      "name": "Upper Back Release",
+      "time": 15
+    },
+    "Upward Table": {
+      "downloadURL": "https://firebasestorage.googleapis.com/v0/b/lets-stretch.appspot.com/o/Stretches%2FUpward%20Table.png?alt=media&token=b0f2daad-4272-4845-8c57-b4b951bf4002",
+      "drawableIndex": 2130837674,
+      "instructions": "Sit down straight with your legs bent. Press your palms against the floor behind your back. Pushing with your hands, raise your pelvis so that your thighs and back are parallel to the floor",
+      "name": "Upward Table",
+      "time": 30
+    },
+    "Warrior Pose - Left": {
+      "downloadURL": "https://firebasestorage.googleapis.com/v0/b/lets-stretch.appspot.com/o/Stretches%2FWarrior%20Pose%20-%20Left.png?alt=media&token=29ae08b1-9ecc-48a4-962f-2e32c9bb7517",
+      "drawableIndex": 2130837686,
+      "instructions": "Lunge forward, bending your left leg to a 90 degrees angle, and keeping your right leg straight. Reach up toward the sky.",
+      "name": "Warrior Pose - Left",
+      "time": 15
+    },
+    "Warrior Pose - Left Foot": {
+      "downloadURL": "https://firebasestorage.googleapis.com/v0/b/lets-stretch.appspot.com/o/Stretches%2FWarrior%20Pose%20-%20Left%20Foot.png?alt=media&token=b9548079-be20-4da7-85f0-2dabe9df30dc",
+      "drawableIndex": 2130837643,
+      "instructions": "Bend forward, stretching your arms and rising your right leg parallel to the floor. Try to keep your arms, back and right leg in one line. Look down",
+      "name": "Warrior Pose - Left Foot",
+      "time": 15
+    },
+    "Warrior Pose - Right": {
+      "downloadURL": "https://firebasestorage.googleapis.com/v0/b/lets-stretch.appspot.com/o/Stretches%2FWarrior%20Pose%20-%20Right.png?alt=media&token=6860513c-5e10-4baf-bbf4-ca0d0d802098",
+      "drawableIndex": 2130837686,
+      "instructions": "Lunge forward, bending your right leg to a 90 degrees angle, and keeping your left leg straight. Reach up toward the sky.",
+      "name": "Warrior Pose - Right",
+      "time": 15
+    },
+    "Warrior Pose - Right Foot": {
+      "downloadURL": "https://firebasestorage.googleapis.com/v0/b/lets-stretch.appspot.com/o/Stretches%2FWarrior%20Pose%20-%20Right%20Foot.png?alt=media&token=5ec31982-20cd-4649-8928-35e8147608b0",
+      "drawableIndex": 2130837643,
+      "instructions": "Bend forward, stretching your arms and rising your left leg parallel to the floor. Try to keep your arms, back and right leg in one line. Look down",
+      "name": "Warrior Pose - Right Foot",
+      "time": 15
+    }
+  },
+  "Updated": "07/21/2017"
+}
