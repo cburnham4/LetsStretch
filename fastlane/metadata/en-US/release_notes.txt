@@ -1,0 +1,6 @@
+What's new in this update:
+
+- Routines and stretch content now load from GitHub (more reliable than Firebase)
+- Stretch illustrations load from hosted images
+- Refreshed UI and Swift Package Manager build updates
+- Stability improvements

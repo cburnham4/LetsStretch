@@ -1,0 +1,1 @@
+Let's Stretch allows the user to quickly select a stretch routine and complete the stretches with a built in timer.

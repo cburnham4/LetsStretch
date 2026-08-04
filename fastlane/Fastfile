@@ -1,0 +1,221 @@
+# App Store flow mirrors TruthFinder / Sunrise & Sunset:
+#   1. release_letsstretch — bump build, archive, upload IPA via xcrun altool
+#   2. submit_letsstretch — deliver (API key) for version + metadata + submit
+#
+# Configure fastlane/.env (gitignored):
+#   APP_STORE_CONNECT_KEY_ID=...
+#   APP_STORE_CONNECT_ISSUER_ID=...
+#   APP_STORE_CONNECT_KEY_PATH=AuthKey_XXXXX.p8
+#
+# Prefer newer fastlane for deliver:
+#   ~/.gem/ruby/4.0.0/bin/fastlane ios submit_letsstretch submit:true
+
+ENV["LC_ALL"] = "en_US.UTF-8"
+ENV["LANG"] = "en_US.UTF-8"
+
+require "fileutils"
+
+def asc_auth_options_for_upload
+  key_id = ENV["APP_STORE_CONNECT_KEY_ID"]
+  issuer_id = ENV["APP_STORE_CONNECT_ISSUER_ID"]
+  raw_path = ENV["APP_STORE_CONNECT_KEY_PATH"]
+  return {} if key_id.to_s.strip.empty? || issuer_id.to_s.strip.empty? || raw_path.to_s.strip.empty?
+
+  fastlane_dir = File.expand_path(__dir__)
+  repo_root = File.expand_path("..", __dir__)
+  path = File.expand_path(raw_path, fastlane_dir)
+  path = File.expand_path(raw_path, repo_root) unless File.file?(path)
+  UI.user_error!("APP_STORE_CONNECT_KEY_PATH file not found: #{raw_path}") unless File.file?(path)
+
+  {
+    api_key: app_store_connect_api_key(
+      key_id: key_id,
+      issuer_id: issuer_id,
+      key_filepath: path,
+      in_house: false
+    )
+  }
+end
+
+def upload_letsstretch_ipa_via_altool(ipa_name = "LetsStretch.ipa")
+  key_id = ENV["APP_STORE_CONNECT_KEY_ID"].to_s.strip
+  issuer_id = ENV["APP_STORE_CONNECT_ISSUER_ID"].to_s.strip
+  UI.user_error!("Set APP_STORE_CONNECT_KEY_ID and APP_STORE_CONNECT_ISSUER_ID in fastlane/.env") if key_id.empty? || issuer_id.empty?
+
+  repo_root = File.expand_path("..", __dir__)
+  fastlane_dir = File.expand_path(__dir__)
+  ipa = File.join(repo_root, ipa_name)
+  UI.user_error!("IPA not found: #{ipa}") unless File.file?(ipa)
+
+  require "shellwords"
+  sh(
+    "export API_PRIVATE_KEYS_DIR=#{Shellwords.escape(fastlane_dir)} LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 && " \
+    "xcrun altool --upload-app -f #{Shellwords.escape(ipa)} --type ios " \
+    "--api-key #{Shellwords.escape(key_id)} --api-issuer #{Shellwords.escape(issuer_id)}"
+  )
+end
+
+def project_version_and_build
+  project_content = File.read(PROJECT_FILE)
+  version = project_content.match(/MARKETING_VERSION = (\d+\.\d+\.?\d*);/)[1]
+  build = project_content.match(/CURRENT_PROJECT_VERSION = (\d+);/)[1]
+  [version, build]
+end
+
+default_platform(:ios)
+
+XCODEPROJ = "LetsStretch.xcodeproj"
+PROJECT_FILE = "../LetsStretch.xcodeproj/project.pbxproj"
+APP_ID = "us.letshang.lets-stretch"
+IPA_NAME = "LetsStretch.ipa"
+SCHEME = "LetsStretch"
+
+platform :ios do
+  private_lane :bump_build_in_project do
+    project_content = File.read(PROJECT_FILE)
+    build_match = project_content.match(/CURRENT_PROJECT_VERSION = (\d+);/)
+    current_build = build_match ? build_match[1].to_i : 1
+    new_build = current_build + 1
+    UI.message("Build: #{current_build} -> #{new_build}")
+    updated_content = project_content.gsub(/CURRENT_PROJECT_VERSION = \d+;/, "CURRENT_PROJECT_VERSION = #{new_build};")
+    File.write(PROJECT_FILE, updated_content)
+    new_build
+  end
+
+  desc "Increment build number"
+  lane :bump_build do
+    bump_build_in_project
+    UI.success("Build number incremented")
+  end
+
+  desc "Increment marketing version (type: patch|minor|major)"
+  lane :bump_version do |options|
+    bump_type = options[:type] || "patch"
+    project_content = File.read(PROJECT_FILE)
+    version_match = project_content.match(/MARKETING_VERSION = (\d+\.\d+\.?\d*);/)
+    current_version = version_match ? version_match[1] : "1.0.0"
+    UI.message("Current version: #{current_version}")
+
+    parts = current_version.split(".").map(&:to_i)
+    parts << 0 while parts.length < 3
+
+    case bump_type
+    when "major"
+      parts[0] += 1
+      parts[1] = 0
+      parts[2] = 0
+    when "minor"
+      parts[1] += 1
+      parts[2] = 0
+    when "patch"
+      parts[2] += 1
+    end
+
+    new_version = parts.length == 3 && parts[2] == 0 && bump_type != "patch" ? "#{parts[0]}.#{parts[1]}" : parts.join(".")
+    # Keep two-segment style when patch is 0 and original had two segments (e.g. 1.45 -> 1.46)
+    if bump_type == "minor" && current_version.count(".") == 1
+      new_version = "#{parts[0]}.#{parts[1]}"
+    end
+
+    UI.message("New version: #{new_version}")
+    updated_content = project_content.gsub(/MARKETING_VERSION = \d+\.\d+\.?\d*;/, "MARKETING_VERSION = #{new_version};")
+    File.write(PROJECT_FILE, updated_content)
+    UI.success("Version bumped to #{new_version}")
+  end
+
+  desc "Build and upload IPA via altool"
+  desc "Options: skip_bump:true to reuse current build number"
+  lane :release_letsstretch do |options|
+    bump_build_in_project unless options[:skip_bump].to_s == "true" || options[:skip_bump] == true
+
+    build_app(
+      scheme: SCHEME,
+      project: XCODEPROJ,
+      export_method: "app-store",
+      clean: true,
+      xcodebuild_formatter: "",
+      xcargs: "-allowProvisioningUpdates",
+      export_xcargs: "-allowProvisioningUpdates",
+      export_options: {
+        method: "app-store-connect",
+        signingStyle: "automatic",
+        teamID: "56NQ7Z9L75"
+      }
+    )
+
+    upload_letsstretch_ipa_via_altool(IPA_NAME)
+    UI.success("✅ Build uploaded via altool. Run submit_letsstretch when processing completes.")
+  end
+
+  desc "Upload existing LetsStretch.ipa via altool"
+  lane :upload_letsstretch_ipa do
+    upload_letsstretch_ipa_via_altool(IPA_NAME)
+    UI.success("✅ IPA uploaded via altool.")
+  end
+
+  desc "Create App Store version, attach build, upload release notes, optionally submit"
+  desc "Options: submit:true, skip_screenshots:true"
+  lane :submit_letsstretch do |options|
+    api_opts = asc_auth_options_for_upload
+    UI.user_error!("Configure APP_STORE_CONNECT_* in fastlane/.env") if api_opts.empty?
+
+    version, build = project_version_and_build
+    submit = options[:submit].to_s == "true" || options[:submit] == true
+    skip_sc = options.fetch(:skip_screenshots, true)
+    skip_sc = skip_sc.to_s == "true" || skip_sc == true
+
+    deliver(
+      app_identifier: APP_ID,
+      app_version: version,
+      build_number: build,
+      skip_binary_upload: true,
+      skip_screenshots: skip_sc,
+      metadata_path: "./fastlane/metadata",
+      submit_for_review: submit,
+      automatic_release: true,
+      force: true,
+      precheck_include_in_app_purchases: false,
+      submission_information: {
+        export_compliance_uses_encryption: false,
+        add_id_info_uses_idfa: true
+      },
+      **api_opts
+    )
+
+    if submit
+      UI.success("✅ Version #{version} (#{build}) submitted for App Store review!")
+    else
+      UI.success("✅ Version #{version} (#{build}) prepared on App Store Connect.")
+    end
+  end
+
+  desc "One-shot: bump minor version, build, altool upload, wait, submit"
+  lane :ship do |options|
+    bump_version(type: options[:type] || "minor")
+
+    if options[:notes]
+      notes_path = File.expand_path("../fastlane/metadata/en-US/release_notes.txt", __dir__)
+      FileUtils.mkdir_p(File.dirname(notes_path))
+      File.write(notes_path, options[:notes])
+      UI.message("Release notes updated")
+    end
+
+    release_letsstretch
+
+    submit_flag = options[:submit].to_s != "false" ? "submit:true" : "submit:false"
+    fastlane_bin = File.expand_path("~/.gem/ruby/4.0.0/bin/fastlane")
+    fastlane_bin = "fastlane" unless File.executable?(fastlane_bin)
+
+    require "shellwords"
+    sh(
+      "cd #{Shellwords.escape(File.expand_path('..', __dir__))} && " \
+      "export LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8 BUNDLE_GEMFILE= DEVELOPER_DIR=/Applications/Xcode_263.app/Contents/Developer && " \
+      "#{Shellwords.escape(fastlane_bin)} ios submit_letsstretch #{submit_flag}"
+    )
+  end
+
+  desc "Alias for release_letsstretch"
+  lane :release do
+    release_letsstretch
+  end
+end

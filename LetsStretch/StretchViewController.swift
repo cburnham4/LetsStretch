@@ -54,7 +54,10 @@ class StretchViewController: UIViewController, BannerViewDelegate {
         view.backgroundColor = AppTheme.background
         view.tintColor = AppTheme.accent
         bannerContainer?.backgroundColor = AppTheme.background
-        timeLabel.superview?.backgroundColor = AppTheme.background
+
+        // timeLabel → vertical stack → TimeView (the white strip in the storyboard)
+        timeLabel.superview?.backgroundColor = .clear
+        timeLabel.superview?.superview?.backgroundColor = AppTheme.background
 
         stretchNameLabel.font = .systemFont(ofSize: 28, weight: .bold)
         stretchNameLabel.textColor = AppTheme.ink
@@ -69,9 +72,9 @@ class StretchViewController: UIViewController, BannerViewDelegate {
         stretchNumLabel.font = .systemFont(ofSize: 15, weight: .semibold)
         stretchNumLabel.textColor = AppTheme.inkSecondary
 
-        stretchImage.backgroundColor = AppTheme.surface
-        stretchImage.layer.cornerRadius = 20
-        stretchImage.layer.cornerCurve = .continuous
+        // Match page background — no white “card” behind the illustration
+        stretchImage.backgroundColor = AppTheme.background
+        stretchImage.layer.cornerRadius = 0
         stretchImage.clipsToBounds = true
         stretchImage.contentMode = .scaleAspectFit
     }
