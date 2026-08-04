@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		E01C2D541F422941001118F2 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01C2D531F422941001118F2 /* Utils.swift */; };
-		E0AD000130200400002FF7B6 /* AdBannerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AD000030200400002FF7B6 /* AdBannerHelper.swift */; };
-		E0AD000330200500002FF7B6 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AD000230200500002FF7B6 /* AppTheme.swift */; };
 		E01FE0711F369BFD003ABDCA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01FE0701F369BFD003ABDCA /* AppDelegate.swift */; };
 		E01FE0731F369BFD003ABDCA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01FE0721F369BFD003ABDCA /* ViewController.swift */; };
 		E01FE0761F369BFD003ABDCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E01FE0741F369BFD003ABDCA /* Main.storyboard */; };
@@ -22,11 +20,12 @@
 		E01FE0A81F36BA42003ABDCA /* APIRequests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01FE0A71F36BA42003ABDCA /* APIRequests.swift */; };
 		E01FE0AA1F36C458003ABDCA /* StretchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01FE0A91F36C458003ABDCA /* StretchViewController.swift */; };
 		E082C46B25DEAC6C009661FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E082C46A25DEAC6C009661FF /* GoogleService-Info.plist */; };
+		E0AD000130200400002FF7B6 /* AdBannerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AD000030200400002FF7B6 /* AdBannerHelper.swift */; };
+		E0AD000330200500002FF7B6 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AD000230200500002FF7B6 /* AppTheme.swift */; };
 		E0DC8EF23020021A002FF7B6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E0DC8EF13020021A002FF7B6 /* FirebaseAnalytics */; };
 		E0DC8EF43020021A002FF7B6 /* FirebaseAnalyticsCore in Frameworks */ = {isa = PBXBuildFile; productRef = E0DC8EF33020021A002FF7B6 /* FirebaseAnalyticsCore */; };
 		E0DC8EF63020021A002FF7B6 /* FirebaseAnalyticsIdentitySupport in Frameworks */ = {isa = PBXBuildFile; productRef = E0DC8EF53020021A002FF7B6 /* FirebaseAnalyticsIdentitySupport */; };
 		E0DC8EF83020021A002FF7B6 /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = E0DC8EF73020021A002FF7B6 /* FirebaseCore */; };
-		E0DC8EFA3020021A002FF7B6 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = E0DC8EF93020021A002FF7B6 /* FirebaseDatabase */; };
 		E0DC8EFE30200340002FF7B6 /* GoogleMobileAds in Frameworks */ = {isa = PBXBuildFile; productRef = E0DC8EFD30200340002FF7B6 /* GoogleMobileAds */; };
 		E0DC8F01302003C7002FF7B6 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = E0DC8F00302003C7002FF7B6 /* Kingfisher */; };
 /* End PBXBuildFile section */
@@ -50,8 +49,6 @@
 
 /* Begin PBXFileReference section */
 		E01C2D531F422941001118F2 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
-		E0AD000030200400002FF7B6 /* AdBannerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerHelper.swift; sourceTree = "<group>"; };
-		E0AD000230200500002FF7B6 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		E01FE06D1F369BFD003ABDCA /* LetsStretch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LetsStretch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E01FE0701F369BFD003ABDCA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E01FE0721F369BFD003ABDCA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +67,8 @@
 		E01FE0A71F36BA42003ABDCA /* APIRequests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIRequests.swift; sourceTree = "<group>"; };
 		E01FE0A91F36C458003ABDCA /* StretchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StretchViewController.swift; sourceTree = "<group>"; };
 		E082C46A25DEAC6C009661FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E0AD000030200400002FF7B6 /* AdBannerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerHelper.swift; sourceTree = "<group>"; };
+		E0AD000230200500002FF7B6 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,7 +77,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0DC8EFE30200340002FF7B6 /* GoogleMobileAds in Frameworks */,
-				E0DC8EFA3020021A002FF7B6 /* FirebaseDatabase in Frameworks */,
 				E0DC8F01302003C7002FF7B6 /* Kingfisher in Frameworks */,
 				E0DC8EF23020021A002FF7B6 /* FirebaseAnalytics in Frameworks */,
 				E0DC8EF43020021A002FF7B6 /* FirebaseAnalyticsCore in Frameworks */,
@@ -200,7 +198,6 @@
 				E0DC8EF33020021A002FF7B6 /* FirebaseAnalyticsCore */,
 				E0DC8EF53020021A002FF7B6 /* FirebaseAnalyticsIdentitySupport */,
 				E0DC8EF73020021A002FF7B6 /* FirebaseCore */,
-				E0DC8EF93020021A002FF7B6 /* FirebaseDatabase */,
 				E0DC8EFD30200340002FF7B6 /* GoogleMobileAds */,
 				E0DC8F00302003C7002FF7B6 /* Kingfisher */,
 			);
@@ -519,7 +516,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 10;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 56NQ7Z9L75;
 				INFOPLIST_FILE = LetsStretch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -527,7 +525,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.45;
+				MARKETING_VERSION = 1.46;
 				PRODUCT_BUNDLE_IDENTIFIER = "us.letshang.lets-stretch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -538,7 +536,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CURRENT_PROJECT_VERSION = 10;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 56NQ7Z9L75;
 				INFOPLIST_FILE = LetsStretch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -546,7 +545,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.45;
+				MARKETING_VERSION = 1.46;
 				PRODUCT_BUNDLE_IDENTIFIER = "us.letshang.lets-stretch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -715,11 +714,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = E0DC8EF03020021A002FF7B6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseCore;
-		};
-		E0DC8EF93020021A002FF7B6 /* FirebaseDatabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E0DC8EF03020021A002FF7B6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabase;
 		};
 		E0DC8EFD30200340002FF7B6 /* GoogleMobileAds */ = {
 			isa = XCSwiftPackageProductDependency;
