@@ -38,13 +38,14 @@ enum AppTheme {
         UITableViewCell.appearance().backgroundColor = .clear
     }
 
-    /// Maps Firebase routine names to bundled asset names.
+    /// Maps routine names to bundled asset names.
     static func routineIconName(for routineName: String) -> String? {
         switch routineName {
         case "Back Stretches": return "routine_back"
         case "Full Body": return "routine_full_body"
         case "Leg Stretches": return "routine_legs"
         case "Morning Stretches": return "routine_morning"
+        case "Desk Reset": return "routine_desk"
         default: return nil
         }
     }

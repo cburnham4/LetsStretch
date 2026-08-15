@@ -48,6 +48,20 @@
         "Plank"
       ],
       "downloadURL": "https://raw.githubusercontent.com/cburnham4/LetsStretch/master/content/images/routines/morning-stretches.png"
+    },
+    "Desk Reset": {
+      "Stretches": [
+        "Upper Back Release",
+        "Side Stretch - Left",
+        "Side Stretch - Right",
+        "Sit and Reach",
+        "Left Trianlge Pose",
+        "Right Trianlge Pose",
+        "Cat Pose",
+        "Cow Pose",
+        "Knee Press"
+      ],
+      "downloadURL": "https://raw.githubusercontent.com/cburnham4/LetsStretch/master/content/images/routines/desk-reset.png"
     }
   },
   "Stretches": {
@@ -227,5 +241,5 @@
       "time": 15
     }
   },
-  "Updated": "08/03/2026"
+  "Updated": "08/14/2026"
 }
