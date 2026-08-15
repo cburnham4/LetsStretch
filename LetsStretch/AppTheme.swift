@@ -45,6 +45,7 @@ enum AppTheme {
         case "Full Body": return "routine_full_body"
         case "Leg Stretches": return "routine_legs"
         case "Morning Stretches": return "routine_morning"
+        case "Desk Reset": return "routine_desk"
         default: return nil
         }
     }
