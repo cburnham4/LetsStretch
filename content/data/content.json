@@ -62,9 +62,35 @@
         "Knee Press"
       ],
       "downloadURL": "https://raw.githubusercontent.com/cburnham4/LetsStretch/master/content/images/routines/desk-reset.png"
+    },
+    "Calf & Achilles": {
+      "Stretches": [
+        "Wall Calf Stretch - Left",
+        "Wall Calf Stretch - Right",
+        "Achilles Stretch - Left",
+        "Achilles Stretch - Right",
+        "Downward Dog",
+        "Seated Calf Stretch - Left",
+        "Seated Calf Stretch - Right",
+        "Hamstring - Left",
+        "Hamstring - Right"
+      ],
+      "downloadURL": "https://raw.githubusercontent.com/cburnham4/LetsStretch/master/content/images/routines/calf-achilles.png"
     }
   },
   "Stretches": {
+    "Achilles Stretch - Left": {
+      "downloadURL": "https://raw.githubusercontent.com/cburnham4/LetsStretch/master/content/images/stretches/achilles-stretch-left.png",
+      "instructions": "Face a wall with your left foot back in a shorter stance. Bend your left knee while keeping the heel down. Lean in gently until you feel a stretch lower in the calf and near the Achilles. No bouncing — ease off if you feel sharp pain.",
+      "name": "Achilles Stretch - Left",
+      "time": 30
+    },
+    "Achilles Stretch - Right": {
+      "downloadURL": "https://raw.githubusercontent.com/cburnham4/LetsStretch/master/content/images/stretches/achilles-stretch-right.png",
+      "instructions": "Face a wall with your right foot back in a shorter stance. Bend your right knee while keeping the heel down. Lean in gently until you feel a stretch lower in the calf and near the Achilles. No bouncing — ease off if you feel sharp pain.",
+      "name": "Achilles Stretch - Right",
+      "time": 30
+    },
     "Boat Pose": {
       "downloadURL": "https://raw.githubusercontent.com/cburnham4/LetsStretch/master/content/images/stretches/boat-pose.png",
       "drawableIndex": 2130837638,
@@ -170,6 +196,18 @@
       "name": "Right Trianlge Pose",
       "time": 15
     },
+    "Seated Calf Stretch - Left": {
+      "downloadURL": "https://raw.githubusercontent.com/cburnham4/LetsStretch/master/content/images/stretches/seated-calf-stretch-left.png",
+      "instructions": "Sit with legs extended. Loop a towel or strap around the ball of your left foot. Gently pull your toes toward you while keeping the knee soft. Hold a mild stretch through the calf and Achilles — never force it.",
+      "name": "Seated Calf Stretch - Left",
+      "time": 25
+    },
+    "Seated Calf Stretch - Right": {
+      "downloadURL": "https://raw.githubusercontent.com/cburnham4/LetsStretch/master/content/images/stretches/seated-calf-stretch-right.png",
+      "instructions": "Sit with legs extended. Loop a towel or strap around the ball of your right foot. Gently pull your toes toward you while keeping the knee soft. Hold a mild stretch through the calf and Achilles — never force it.",
+      "name": "Seated Calf Stretch - Right",
+      "time": 25
+    },
     "Side Stretch - Left": {
       "downloadURL": "https://raw.githubusercontent.com/cburnham4/LetsStretch/master/content/images/stretches/side-stretch-left.png",
       "drawableIndex": 2130837664,
@@ -239,7 +277,19 @@
       "instructions": "Bend forward, stretching your arms and rising your left leg parallel to the floor. Try to keep your arms, back and right leg in one line. Look down",
       "name": "Warrior Pose - Right Foot",
       "time": 15
+    },
+    "Wall Calf Stretch - Left": {
+      "downloadURL": "https://raw.githubusercontent.com/cburnham4/LetsStretch/master/content/images/stretches/wall-calf-stretch-left.png",
+      "instructions": "Face a wall. Step your left foot back, heel pressed into the floor, knee straight. Lean forward with hands on the wall until you feel a stretch in the upper left calf. Keep the heel down and breathe — no bouncing.",
+      "name": "Wall Calf Stretch - Left",
+      "time": 30
+    },
+    "Wall Calf Stretch - Right": {
+      "downloadURL": "https://raw.githubusercontent.com/cburnham4/LetsStretch/master/content/images/stretches/wall-calf-stretch-right.png",
+      "instructions": "Face a wall. Step your right foot back, heel pressed into the floor, knee straight. Lean forward with hands on the wall until you feel a stretch in the upper right calf. Keep the heel down and breathe — no bouncing.",
+      "name": "Wall Calf Stretch - Right",
+      "time": 30
     }
   },
-  "Updated": "08/14/2026"
+  "Updated": "08/15/2026"
 }
