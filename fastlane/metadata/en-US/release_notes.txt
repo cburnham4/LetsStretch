@@ -1,6 +1,6 @@
 What's new in this update:
 
-- Routines and stretch content now load from GitHub (more reliable than Firebase)
-- Stretch illustrations load from hosted images
-- Refreshed UI and Swift Package Manager build updates
-- Stability improvements
+- New Desk Reset routine for post-computer tightness
+- New Calf & Achilles routine for tight calves and Achilles
+- Home routine icons now load from hosted images
+- More stretches you can add without an app update
