@@ -20,6 +20,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     private var didLoadAd = false
     private let heroTitleLabel = UILabel()
     private let heroSubtitleLabel = UILabel()
+    private let settingsButton = UIButton(type: .system)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +51,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
         // Walk stack for the 4pt accent view
         view.subviews.forEach { applyAccentIfNeeded(in: $0) }
+
+        configureSettingsButton()
 
         guard let hero = findHeroImageView() else { return }
         hero.contentMode = .scaleAspectFill
@@ -86,6 +89,31 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             heroSubtitleLabel.trailingAnchor.constraint(equalTo: hero.trailingAnchor, constant: -20),
             heroSubtitleLabel.bottomAnchor.constraint(equalTo: hero.bottomAnchor, constant: -18)
         ])
+    }
+
+    private func configureSettingsButton() {
+        settingsButton.translatesAutoresizingMaskIntoConstraints = false
+        let config = UIImage.SymbolConfiguration(pointSize: 18, weight: .semibold)
+        settingsButton.setImage(UIImage(systemName: "gearshape.fill", withConfiguration: config), for: .normal)
+        settingsButton.tintColor = .white
+        settingsButton.backgroundColor = UIColor.black.withAlphaComponent(0.28)
+        settingsButton.layer.cornerRadius = 18
+        settingsButton.accessibilityLabel = "Settings"
+        settingsButton.addTarget(self, action: #selector(openSettings), for: .touchUpInside)
+        view.addSubview(settingsButton)
+        view.bringSubviewToFront(settingsButton)
+
+        NSLayoutConstraint.activate([
+            settingsButton.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 8),
+            settingsButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -16),
+            settingsButton.widthAnchor.constraint(equalToConstant: 36),
+            settingsButton.heightAnchor.constraint(equalToConstant: 36)
+        ])
+    }
+
+    @objc private func openSettings() {
+        let settings = SettingsViewController()
+        navigationController?.pushViewController(settings, animated: true)
     }
 
     private func applyAccentIfNeeded(in view: UIView) {
