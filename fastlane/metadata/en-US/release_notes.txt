@@ -1,6 +1,6 @@
 What's new in this update:
 
-- New Desk Reset routine for post-computer tightness
-- New Calf & Achilles routine for tight calves and Achilles
-- Home routine icons now load from hosted images
-- More stretches you can add without an app update
+- Adjustable time between stretches in Settings (1–10 seconds)
+- Clearer stretch illustrations with transparent backgrounds
+- Distinct left/right images for hamstrings, warriors, cat/cow, and side stretches
+- Screen stays awake during a routine so the timer isn't interrupted
