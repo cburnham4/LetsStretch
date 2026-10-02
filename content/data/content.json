@@ -55,8 +55,8 @@
         "Side Stretch - Left",
         "Side Stretch - Right",
         "Sit and Reach",
-        "Left Trianlge Pose",
-        "Right Trianlge Pose",
+        "Left Triangle Pose",
+        "Right Triangle Pose",
         "Cat Pose",
         "Cow Pose",
         "Knee Press"
@@ -175,11 +175,11 @@
       "name": "Knee Press",
       "time": 30
     },
-    "Left Trianlge Pose": {
-      "downloadURL": "https://raw.githubusercontent.com/cburnham4/LetsStretch/master/content/images/stretches/left-trianlge-pose.png",
+    "Left Triangle Pose": {
+      "downloadURL": "https://raw.githubusercontent.com/cburnham4/LetsStretch/master/content/images/stretches/left-triangle-pose.png",
       "drawableIndex": 2130837687,
       "instructions": "Put your left hand on the left leg or floor as you reach your edge with a straight back. Try not to arch your torso. Keep your legs straight. Raise your right hand. Try to look up at your palm.",
-      "name": "Left Trianlge Pose",
+      "name": "Left Triangle Pose",
       "time": 15
     },
     "Plank": {
@@ -189,11 +189,11 @@
       "name": "Plank",
       "time": 30
     },
-    "Right Trianlge Pose": {
-      "downloadURL": "https://raw.githubusercontent.com/cburnham4/LetsStretch/master/content/images/stretches/right-trianlge-pose.png",
+    "Right Triangle Pose": {
+      "downloadURL": "https://raw.githubusercontent.com/cburnham4/LetsStretch/master/content/images/stretches/right-triangle-pose.png",
       "drawableIndex": 2130837647,
       "instructions": "Put your right hand on the right leg or floor as you reach your edge with a straight back. Try not to arch your torso. Keep your legs straight. Raise your left hand. Try to look up at your palm.",
-      "name": "Right Trianlge Pose",
+      "name": "Right Triangle Pose",
       "time": 15
     },
     "Seated Calf Stretch - Left": {
@@ -250,6 +250,18 @@
       "name": "Upward Table",
       "time": 30
     },
+    "Wall Calf Stretch - Left": {
+      "downloadURL": "https://raw.githubusercontent.com/cburnham4/LetsStretch/master/content/images/stretches/wall-calf-stretch-left.png",
+      "instructions": "Face a wall. Step your left foot back, heel pressed into the floor, knee straight. Lean forward with hands on the wall until you feel a stretch in the upper left calf. Keep the heel down and breathe \u2014 no bouncing.",
+      "name": "Wall Calf Stretch - Left",
+      "time": 30
+    },
+    "Wall Calf Stretch - Right": {
+      "downloadURL": "https://raw.githubusercontent.com/cburnham4/LetsStretch/master/content/images/stretches/wall-calf-stretch-right.png",
+      "instructions": "Face a wall. Step your right foot back, heel pressed into the floor, knee straight. Lean forward with hands on the wall until you feel a stretch in the upper right calf. Keep the heel down and breathe \u2014 no bouncing.",
+      "name": "Wall Calf Stretch - Right",
+      "time": 30
+    },
     "Warrior Pose - Left": {
       "downloadURL": "https://raw.githubusercontent.com/cburnham4/LetsStretch/master/content/images/stretches/warrior-pose-left.png",
       "drawableIndex": 2130837686,
@@ -277,19 +289,7 @@
       "instructions": "Bend forward, stretching your arms and rising your left leg parallel to the floor. Try to keep your arms, back and right leg in one line. Look down",
       "name": "Warrior Pose - Right Foot",
       "time": 15
-    },
-    "Wall Calf Stretch - Left": {
-      "downloadURL": "https://raw.githubusercontent.com/cburnham4/LetsStretch/master/content/images/stretches/wall-calf-stretch-left.png",
-      "instructions": "Face a wall. Step your left foot back, heel pressed into the floor, knee straight. Lean forward with hands on the wall until you feel a stretch in the upper left calf. Keep the heel down and breathe \u2014 no bouncing.",
-      "name": "Wall Calf Stretch - Left",
-      "time": 30
-    },
-    "Wall Calf Stretch - Right": {
-      "downloadURL": "https://raw.githubusercontent.com/cburnham4/LetsStretch/master/content/images/stretches/wall-calf-stretch-right.png",
-      "instructions": "Face a wall. Step your right foot back, heel pressed into the floor, knee straight. Lean forward with hands on the wall until you feel a stretch in the upper right calf. Keep the heel down and breathe \u2014 no bouncing.",
-      "name": "Wall Calf Stretch - Right",
-      "time": 30
     }
   },
-  "Updated": "10/02/2026"
+  "Updated": "10/03/2026"
 }
