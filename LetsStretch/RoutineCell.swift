@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class RoutineCell: UITableViewCell {
 
@@ -24,6 +25,12 @@ class RoutineCell: UITableViewCell {
         contentView.backgroundColor = .clear
         setupChromeIfNeeded()
         styleContent()
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        routineImage.kf.cancelDownloadTask()
+        routineImage.image = nil
     }
 
     override func layoutSubviews() {
@@ -47,14 +54,25 @@ class RoutineCell: UITableViewCell {
         setupChromeIfNeeded()
         styleContent()
         routineNameLabel.text = routine.name
+        routineImage.backgroundColor = AppTheme.accentSoft
 
-        if let icon = AppTheme.routineIconName(for: routine.name),
-           let image = UIImage(named: icon) {
-            routineImage.image = image
-            routineImage.backgroundColor = AppTheme.accentSoft
+        // Prefer bundled icon as a fast placeholder; final art comes from content downloadURL.
+        let placeholder: UIImage? = {
+            if let icon = AppTheme.routineIconName(for: routine.name),
+               let image = UIImage(named: icon) {
+                return image
+            }
+            return UIImage(named: "standing_yoga_stretch")
+        }()
+
+        if let url = URL(string: routine.imageURL), !routine.imageURL.isEmpty {
+            routineImage.kf.setImage(
+                with: url,
+                placeholder: placeholder,
+                options: [.transition(.fade(0.2))]
+            )
         } else {
-            routineImage.image = UIImage(named: "standing_yoga_stretch")
-            routineImage.backgroundColor = AppTheme.accentSoft
+            routineImage.image = placeholder
         }
     }
 

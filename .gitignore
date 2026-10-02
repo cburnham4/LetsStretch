@@ -61,3 +61,10 @@ fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots
 fastlane/test_output
+fastlane/AuthKey_*.p8
+fastlane/.env
+fastlane/*.cer
+fastlane/*.p12
+fastlane/*.mobileprovision
+ApiKey_*.p8
+AuthKey_*.p8

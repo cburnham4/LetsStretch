@@ -1,0 +1,6 @@
+What's new in this update:
+
+- New Desk Reset routine for post-computer tightness
+- New Calf & Achilles routine for tight calves and Achilles
+- Home routine icons now load from hosted images
+- More stretches you can add without an app update
