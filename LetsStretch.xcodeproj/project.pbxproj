@@ -22,6 +22,8 @@
 		E082C46B25DEAC6C009661FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E082C46A25DEAC6C009661FF /* GoogleService-Info.plist */; };
 		E0AD000130200400002FF7B6 /* AdBannerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AD000030200400002FF7B6 /* AdBannerHelper.swift */; };
 		E0AD000330200500002FF7B6 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AD000230200500002FF7B6 /* AppTheme.swift */; };
+		E0AD000530200600002FF7B6 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AD000430200600002FF7B6 /* AppSettings.swift */; };
+		E0AD000730200700002FF7B6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AD000630200700002FF7B6 /* SettingsViewController.swift */; };
 		E0DC8EF23020021A002FF7B6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E0DC8EF13020021A002FF7B6 /* FirebaseAnalytics */; };
 		E0DC8EF43020021A002FF7B6 /* FirebaseAnalyticsCore in Frameworks */ = {isa = PBXBuildFile; productRef = E0DC8EF33020021A002FF7B6 /* FirebaseAnalyticsCore */; };
 		E0DC8EF63020021A002FF7B6 /* FirebaseAnalyticsIdentitySupport in Frameworks */ = {isa = PBXBuildFile; productRef = E0DC8EF53020021A002FF7B6 /* FirebaseAnalyticsIdentitySupport */; };
@@ -69,6 +71,8 @@
 		E082C46A25DEAC6C009661FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E0AD000030200400002FF7B6 /* AdBannerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdBannerHelper.swift; sourceTree = "<group>"; };
 		E0AD000230200500002FF7B6 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		E0AD000430200600002FF7B6 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
+		E0AD000630200700002FF7B6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +140,8 @@
 				E01C2D531F422941001118F2 /* Utils.swift */,
 				E0AD000030200400002FF7B6 /* AdBannerHelper.swift */,
 				E0AD000230200500002FF7B6 /* AppTheme.swift */,
+				E0AD000430200600002FF7B6 /* AppSettings.swift */,
+				E0AD000630200700002FF7B6 /* SettingsViewController.swift */,
 			);
 			path = LetsStretch;
 			sourceTree = "<group>";
@@ -335,6 +341,8 @@
 				E01C2D541F422941001118F2 /* Utils.swift in Sources */,
 				E0AD000130200400002FF7B6 /* AdBannerHelper.swift in Sources */,
 				E0AD000330200500002FF7B6 /* AppTheme.swift in Sources */,
+				E0AD000530200600002FF7B6 /* AppSettings.swift in Sources */,
+				E0AD000730200700002FF7B6 /* SettingsViewController.swift in Sources */,
 				E01FE0A81F36BA42003ABDCA /* APIRequests.swift in Sources */,
 				E01FE0711F369BFD003ABDCA /* AppDelegate.swift in Sources */,
 				E01FE09F1F369ED8003ABDCA /* RoutineCell.swift in Sources */,

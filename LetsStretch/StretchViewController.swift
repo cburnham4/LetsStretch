@@ -34,20 +34,29 @@ class StretchViewController: UIViewController, BannerViewDelegate {
     var secondsLeft = 30;
     var isRunning = false;
     var timer = Timer()
-    final var restTime = 3;
+    var restTime = AppSettings.defaultRestSeconds
     var isRestTime = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.stretchIndex = 0
+        self.restTime = AppSettings.restSecondsBetweenStretches
         applyStretchChrome()
         
         self.navigationController?.isNavigationBarHidden = false
+        // Keep screen awake during a routine so the timer/bell aren't interrupted by lock.
+        UIApplication.shared.isIdleTimerDisabled = true
         getStretches()
         startStretches()
         
         self.title = routine?.name
+    }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        UIApplication.shared.isIdleTimerDisabled = false
+        timer.invalidate()
     }
 
     private func applyStretchChrome() {
@@ -108,10 +117,12 @@ class StretchViewController: UIViewController, BannerViewDelegate {
         }
         let stretch = stretches[stretchIndex]
         
-        /* Set stretch values */
+        /* Set stretch values — start with get-ready countdown */
+        self.restTime = AppSettings.restSecondsBetweenStretches
+        self.isRestTime = true
         self.secondsLeft = restTime
         stretchNameLabel.text = stretch.name
-        instructionLabel.text = stretch.instructions
+        instructionLabel.text = "Get ready — \(stretch.instructions)"
         let url = URL(string: (stretch.imageURL))
         stretchImage.kf.setImage(with: url)
         stretchNumLabel.text = "\(stretchIndex + 1) / \(stretches.count)"
@@ -136,17 +147,16 @@ class StretchViewController: UIViewController, BannerViewDelegate {
         timeLabel.text = "\(secondsLeft)"
         if(secondsLeft == 0){
             if(isRestTime){
-                secondsLeft = stretches[stretchIndex].time
+                let stretch = stretches[stretchIndex]
+                secondsLeft = stretch.time
                 timeLabel.text = "\(secondsLeft)"
+                instructionLabel.text = stretch.instructions
                 isRestTime = false
-                
             }else{
                 playSound()
                 stretchIndex += 1;
                 startStretches()
-                isRestTime = true
             }
-            
         }
         
     }
@@ -164,7 +174,6 @@ class StretchViewController: UIViewController, BannerViewDelegate {
     @IBAction func nextButtonClicked(_ sender: UIButton) {
         stretchIndex += 1;
         startStretches()
-        isRestTime = true
     }
     
     @IBAction func pauseClicked(_ sender: UIButton) {
