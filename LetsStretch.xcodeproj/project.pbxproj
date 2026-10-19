@@ -24,6 +24,7 @@
 		E0AD000330200500002FF7B6 /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AD000230200500002FF7B6 /* AppTheme.swift */; };
 		E0AD000530200600002FF7B6 /* AppSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AD000430200600002FF7B6 /* AppSettings.swift */; };
 		E0AD000730200700002FF7B6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AD000630200700002FF7B6 /* SettingsViewController.swift */; };
+		E0AD000930200800002FF7B6 /* AppStoreReviewPrompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0AD000830200800002FF7B6 /* AppStoreReviewPrompt.swift */; };
 		E0DC8EF23020021A002FF7B6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E0DC8EF13020021A002FF7B6 /* FirebaseAnalytics */; };
 		E0DC8EF43020021A002FF7B6 /* FirebaseAnalyticsCore in Frameworks */ = {isa = PBXBuildFile; productRef = E0DC8EF33020021A002FF7B6 /* FirebaseAnalyticsCore */; };
 		E0DC8EF63020021A002FF7B6 /* FirebaseAnalyticsIdentitySupport in Frameworks */ = {isa = PBXBuildFile; productRef = E0DC8EF53020021A002FF7B6 /* FirebaseAnalyticsIdentitySupport */; };
@@ -73,6 +74,7 @@
 		E0AD000230200500002FF7B6 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
 		E0AD000430200600002FF7B6 /* AppSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppSettings.swift; sourceTree = "<group>"; };
 		E0AD000630200700002FF7B6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		E0AD000830200800002FF7B6 /* AppStoreReviewPrompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreReviewPrompt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 			children = (
 				E082C46A25DEAC6C009661FF /* GoogleService-Info.plist */,
 				E01FE0701F369BFD003ABDCA /* AppDelegate.swift */,
+				E0AD000830200800002FF7B6 /* AppStoreReviewPrompt.swift */,
 				E01FE0771F369BFD003ABDCA /* Assets.xcassets */,
 				E01FE0791F369BFD003ABDCA /* LaunchScreen.storyboard */,
 				E01FE07C1F369BFD003ABDCA /* Info.plist */,
@@ -343,6 +346,7 @@
 				E0AD000330200500002FF7B6 /* AppTheme.swift in Sources */,
 				E0AD000530200600002FF7B6 /* AppSettings.swift in Sources */,
 				E0AD000730200700002FF7B6 /* SettingsViewController.swift in Sources */,
+				E0AD000930200800002FF7B6 /* AppStoreReviewPrompt.swift in Sources */,
 				E01FE0A81F36BA42003ABDCA /* APIRequests.swift in Sources */,
 				E01FE0711F369BFD003ABDCA /* AppDelegate.swift in Sources */,
 				E01FE09F1F369ED8003ABDCA /* RoutineCell.swift in Sources */,
@@ -525,7 +529,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = 56NQ7Z9L75;
 				INFOPLIST_FILE = LetsStretch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -533,7 +537,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.49;
+				MARKETING_VERSION = 1.50;
 				PRODUCT_BUNDLE_IDENTIFIER = "us.letshang.lets-stretch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -545,7 +549,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 14;
+				CURRENT_PROJECT_VERSION = 15;
 				DEVELOPMENT_TEAM = 56NQ7Z9L75;
 				INFOPLIST_FILE = LetsStretch/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
@@ -553,7 +557,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.49;
+				MARKETING_VERSION = 1.50;
 				PRODUCT_BUNDLE_IDENTIFIER = "us.letshang.lets-stretch";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

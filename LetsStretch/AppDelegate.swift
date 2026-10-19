@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         AppTheme.applyGlobalAppearance()
         FirebaseApp.configure()
         MobileAds.shared.start(completionHandler: nil)
+        AppStoreReviewPrompt.recordOpen()
         return true
     }
 

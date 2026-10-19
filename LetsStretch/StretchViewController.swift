@@ -107,11 +107,9 @@ class StretchViewController: UIViewController, BannerViewDelegate {
     }
     
     func startStretches(){
-        if(stretches.count <= stretchIndex) {
-            /* Go back to main page */
-            navigationController?.popViewController(animated: true)
+        if finishRoutineIfComplete() {
             return
-        }else{
+        } else {
             /* Request ad */
             bannerView?.load(Request())
         }
@@ -137,12 +135,10 @@ class StretchViewController: UIViewController, BannerViewDelegate {
     }
     
     @objc func updateClock(){
-        if(stretches.count <= stretchIndex) {
-            /* Go back to main page */
-            navigationController?.popViewController(animated: true)
+        if finishRoutineIfComplete() {
             return
         }
-        
+
         secondsLeft -= 1;
         timeLabel.text = "\(secondsLeft)"
         if(secondsLeft == 0){
@@ -168,6 +164,15 @@ class StretchViewController: UIViewController, BannerViewDelegate {
         
         // to play sound
         AudioServicesPlaySystemSound (systemSoundID)
+    }
+
+    /// Returns true when the routine is finished (and navigates home).
+    @discardableResult
+    private func finishRoutineIfComplete() -> Bool {
+        guard stretches.count <= stretchIndex else { return false }
+        AppStoreReviewPrompt.recordSuccessfulActionAndMaybeRequest(from: self)
+        navigationController?.popViewController(animated: true)
+        return true
     }
     
 
