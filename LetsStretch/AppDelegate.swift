@@ -18,7 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         AppTheme.applyGlobalAppearance()
         FirebaseApp.configure()
-        MobileAds.shared.start(completionHandler: nil)
+        if !AdConfig.adsDisabled {
+            MobileAds.shared.start(completionHandler: nil)
+        }
         AppStoreReviewPrompt.recordOpen()
         return true
     }
