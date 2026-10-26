@@ -13,6 +13,7 @@ class LetsStretchUITests: XCTestCase {
         super.setUp()
         continueAfterFailure = false
         try? FileManager.default.createDirectory(at: outDir, withIntermediateDirectories: true)
+        app.launchArguments += ["-DisableAds"]
         app.launch()
     }
 

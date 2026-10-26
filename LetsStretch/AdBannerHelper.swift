@@ -11,6 +11,13 @@ enum AdUnits {
     static let stretchBanner = "ca-app-pub-8223005482588566/2963446943"
 }
 
+enum AdConfig {
+    /// Pass `-DisableAds` (UITest / screenshot captures) to hide banners.
+    static var adsDisabled: Bool {
+        ProcessInfo.processInfo.arguments.contains("-DisableAds")
+    }
+}
+
 extension UIViewController {
     /// Creates a programmatic BannerView inside a storyboard container.
     /// GoogleMobileAds.BannerView cannot be reliably instantiated from Interface Builder.
@@ -27,6 +34,19 @@ extension UIViewController {
 
         container.subviews.forEach { $0.removeFromSuperview() }
         container.backgroundColor = .clear
+
+        if AdConfig.adsDisabled {
+            container.isHidden = true
+            container.constraints
+                .filter { $0.firstAttribute == .height }
+                .forEach { $0.constant = 0 }
+            NSLayoutConstraint.activate([
+                container.heightAnchor.constraint(equalToConstant: 0)
+            ])
+            return nil
+        }
+
+        container.isHidden = false
 
         let width = max(container.bounds.width, view.bounds.width, 320)
         let adSize = currentOrientationAnchoredAdaptiveBanner(width: width)
