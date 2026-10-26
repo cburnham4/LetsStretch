@@ -2,35 +2,94 @@
 //  LetsStretchUITests.swift
 //  LetsStretchUITests
 //
-//  Created by Carl Burnham on 8/5/17.
-//  Copyright © 2017 Carl Burnham. All rights reserved.
-//
 
 import XCTest
 
 class LetsStretchUITests: XCTestCase {
-        
+    let app = XCUIApplication()
+    let outDir = URL(fileURLWithPath: "/tmp/asc-captures/letsstretch")
+
     override func setUp() {
         super.setUp()
-        
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-        
-        // In UI tests it is usually best to stop immediately when a failure occurs.
         continueAfterFailure = false
-        // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-        XCUIApplication().launch()
+        try? FileManager.default.createDirectory(at: outDir, withIntermediateDirectories: true)
+        app.launch()
+    }
 
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
+    func testCaptureAppStoreScreens() {
+        // Home
+        Thread.sleep(forTimeInterval: 2.0)
+        save("01-home")
+
+        // Open a routine — prefer Full Body / Morning / Back
+        let preferred = ["Full Body", "Morning Stretches", "Back Stretches", "Leg Stretches", "Desk Reset"]
+        var opened = false
+        for name in preferred {
+            let row = app.staticTexts[name].firstMatch
+            if row.waitForExistence(timeout: 3) {
+                row.tap()
+                opened = true
+                break
+            }
+        }
+        if !opened {
+            // First table/cell fallback
+            let cell = app.cells.firstMatch
+            if cell.waitForExistence(timeout: 5) {
+                cell.tap()
+            } else {
+                app.otherElements.containing(.staticText, identifier: "Back Stretches").element.tap()
+            }
+        }
+
+        Thread.sleep(forTimeInterval: 3.5)
+        save("02-stretch")
+
+        // Wait a bit for illustration / timer UI
+        Thread.sleep(forTimeInterval: 2.0)
+        save("03-stretch-active")
+
+        // Back to home
+        if app.navigationBars.buttons.firstMatch.exists {
+            app.navigationBars.buttons.firstMatch.tap()
+            Thread.sleep(forTimeInterval: 1.2)
+        }
+
+        // Settings gear
+        let settings = app.buttons["Settings"].firstMatch
+        let gear = app.buttons.matching(NSPredicate(format: "label CONTAINS[c] 'setting' OR label CONTAINS[c] 'gear'")).firstMatch
+        if settings.waitForExistence(timeout: 3) {
+            settings.tap()
+        } else if gear.waitForExistence(timeout: 2) {
+            gear.tap()
+        } else {
+            // Top-right gear often accessibility-labeled as button without text — tap via coordinate near top-right of home
+            let home = app
+            // Try navigation bar buttons
+            let navButtons = home.navigationBars.buttons
+            if navButtons.count > 0 {
+                navButtons.element(boundBy: navButtons.count - 1).tap()
+            }
+        }
+        Thread.sleep(forTimeInterval: 1.5)
+        save("04-settings")
+
+        // Another routine for variety if still on home
+        if app.staticTexts["Calf & Achilles"].waitForExistence(timeout: 2) {
+            app.staticTexts["Calf & Achilles"].tap()
+            Thread.sleep(forTimeInterval: 3.0)
+            save("05-stretch-calf")
+        }
     }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+
+    private func save(_ name: String) {
+        let shot = XCUIScreen.main.screenshot()
+        let path = outDir.appendingPathComponent("\(name).png")
+        do {
+            try shot.pngRepresentation.write(to: path)
+            print("📸 wrote \(path.path)")
+        } catch {
+            XCTFail("Failed to write \(name): \(error)")
+        }
     }
-    
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
 }
