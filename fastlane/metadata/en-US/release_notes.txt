@@ -1,4 +1,4 @@
 What's new in this update:
 
-- Refreshed App Store screenshots and promo artwork
+- Refreshed App Store screenshots
 - Performance and stability improvements

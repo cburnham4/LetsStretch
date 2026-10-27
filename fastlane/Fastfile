@@ -170,6 +170,7 @@ platform :ios do
       build_number: build,
       skip_binary_upload: true,
       skip_screenshots: skip_sc,
+      overwrite_screenshots: !skip_sc,
       metadata_path: "./fastlane/metadata",
       submit_for_review: submit,
       automatic_release: true,
