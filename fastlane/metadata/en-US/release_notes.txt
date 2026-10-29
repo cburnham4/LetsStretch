@@ -1,4 +1,5 @@
 What's new in this update:
 
-- Refreshed App Store screenshots
+- Stretch diagrams blend into the cream page background (no peach box)
+- Offline diagram loading reliability improvements
 - Performance and stability improvements
