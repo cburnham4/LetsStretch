@@ -10,7 +10,7 @@ import Foundation
 
 class APIRequests {
 
-    /// Static content hosted in this repo (replaces Firebase Realtime Database).
+    /// Static content hosted in this repo (optional refresh; app ships a bundled copy).
     static let contentURL = URL(string:
         "https://raw.githubusercontent.com/cburnham4/LetsStretch/master/content/data/content.json"
     )!
@@ -21,7 +21,72 @@ class APIRequests {
     private static var cachedRoot: [String: Any]?
     private static var inFlightWaiters: [(Bool) -> Void]?
 
+    // MARK: - Bundled defaults
+
+    /// `content/data/content.json` copied into the app bundle via the `content` folder reference.
+    static func loadBundledRoot() -> [String: Any]? {
+        let candidates: [URL?] = [
+            Bundle.main.url(forResource: "content", withExtension: "json", subdirectory: "content/data"),
+            Bundle.main.bundleURL
+                .appendingPathComponent("content/data/content.json", isDirectory: false)
+        ]
+        for candidate in candidates {
+            guard let url = candidate,
+                  FileManager.default.fileExists(atPath: url.path),
+                  let data = try? Data(contentsOf: url),
+                  let root = try? JSONSerialization.jsonObject(with: data) as? [String: Any] else {
+                continue
+            }
+            return root
+        }
+        return nil
+    }
+
+    private static func applyRoot(_ root: [String: Any]) {
+        cachedRoot = root
+        parseRoutines(from: root)
+        parseStretches(from: root)
+    }
+
+    /// Ensures routines/stretches are available without the network.
+    /// Prefers previously archived UserDefaults data, then the bundled content.json.
+    @discardableResult
+    static func ensureSeededContent() -> Bool {
+        if !routines.isEmpty && !stretches.isEmpty {
+            return true
+        }
+
+        let savedRoutines = Utils.getSavedRoutines()
+        let savedStretches = Utils.getSavedStretches()
+        if !savedRoutines.isEmpty && !savedStretches.isEmpty {
+            routines = savedRoutines
+            stretches = savedStretches
+            return true
+        }
+
+        if let root = loadBundledRoot() {
+            applyRoot(root)
+            return !routines.isEmpty
+        }
+        return false
+    }
+
+    /// Persist current in-memory content for next cold start.
+    static func archiveCurrentContent() {
+        let defaults = UserDefaults.standard
+        let routinesData = NSKeyedArchiver.archivedData(withRootObject: routines)
+        let stretchesData = NSKeyedArchiver.archivedData(withRootObject: stretches)
+        defaults.set(routinesData, forKey: "SavedRoutines")
+        defaults.set(stretchesData, forKey: "SavedStretches")
+        if let updated = cachedRoot?["Updated"] as? String {
+            defaults.setValue(updated, forKey: "DateUpdated")
+        }
+    }
+
+    // MARK: - Network (optional refresh)
+
     /// Fetches (or reuses) the shared content.json payload.
+    /// On network failure, falls back to bundled JSON so callers still get content.
     private static func loadContent(forceRefresh: Bool = false, completion: @escaping (Bool) -> Void) {
         if !forceRefresh, cachedRoot != nil {
             completion(true)
@@ -43,21 +108,29 @@ class APIRequests {
             let waiters = inFlightWaiters ?? []
             inFlightWaiters = nil
 
-            guard error == nil,
-                  let data = data,
-                  let root = try? JSONSerialization.jsonObject(with: data) as? [String: Any] else {
+            if error == nil,
+               let data = data,
+               let root = try? JSONSerialization.jsonObject(with: data) as? [String: Any] {
+                applyRoot(root)
                 DispatchQueue.main.async {
-                    waiters.forEach { $0(false) }
+                    waiters.forEach { $0(true) }
                 }
                 return
             }
 
-            cachedRoot = root
-            parseRoutines(from: root)
-            parseStretches(from: root)
+            // Network failed — keep / seed offline content rather than going blank.
+            let seeded: Bool
+            if cachedRoot != nil || (!routines.isEmpty && !stretches.isEmpty) {
+                seeded = true
+            } else if let bundled = loadBundledRoot() {
+                applyRoot(bundled)
+                seeded = !routines.isEmpty
+            } else {
+                seeded = ensureSeededContent()
+            }
 
             DispatchQueue.main.async {
-                waiters.forEach { $0(true) }
+                waiters.forEach { $0(seeded) }
             }
         }.resume()
     }
@@ -104,9 +177,20 @@ class APIRequests {
     }
 
     public static func getDateUpdated(callback: @escaping (_ date: String) -> ()) {
-        loadContent { success in
-            let date = (cachedRoot?["Updated"] as? String) ?? "00/00/0000"
-            callback(success ? date : "00/00/0000")
+        // Always attempt network so bundled seeding does not block optional refresh.
+        loadContent(forceRefresh: true) { _ in
+            if let date = cachedRoot?["Updated"] as? String {
+                callback(date)
+                return
+            }
+            if let bundled = loadBundledRoot(), let date = bundled["Updated"] as? String {
+                if routines.isEmpty || stretches.isEmpty {
+                    applyRoot(bundled)
+                }
+                callback(date)
+                return
+            }
+            callback("00/00/0000")
         }
     }
 }

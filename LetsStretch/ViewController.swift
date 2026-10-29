@@ -25,6 +25,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidLoad() {
         super.viewDidLoad()
         configureHomeChrome()
+        // Offline-first: show bundled / archived content immediately, then optionally refresh.
+        APIRequests.ensureSeededContent()
+        routines = APIRequests.routines
+        tableView.reloadData()
         getDateUpdated()
     }
 
@@ -138,67 +142,74 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return search(view)
     }
     
-    /* Get data if it has been updated, else use the existing data */
+    /* Optional network refresh — UI already seeded from bundle / UserDefaults. */
     func getDateUpdated(){
         APIRequests.getDateUpdated(callback: dateCallback(dateUpdated:) )
     }
     
     func dateCallback(dateUpdated: String){
+        // Ignore sentinel from a total content miss; keep whatever we already seeded.
+        guard dateUpdated != "00/00/0000",
+              let newDate = optionalDate(from: dateUpdated) else {
+            refreshTableFromAPI()
+            return
+        }
+
         let defaults = UserDefaults.standard
-        let newDate = DateHelper.getDate(dateString: dateUpdated)
-        
-        if let savedDateString = defaults.string(forKey: "DateUpdated") {
-            
-            let savedDate = DateHelper.getDate(dateString: savedDateString)
-             // Date froom server
-            /* If the dates are different then get data from server */
-            
-            
-            if(savedDate != newDate){
-                getData()
-                print("Dates do not match")
-            }else{
-                print("Get local data")
-                getLocalData()
-            }
-        }else{
-            /* If no saved date then make sure to get new data from server */
-            print("No saved date, get new data")
+
+        if let savedDateString = defaults.string(forKey: "DateUpdated"),
+           let savedDate = optionalDate(from: savedDateString),
+           savedDate == newDate {
+            print("Get local data")
+            getLocalData()
+        } else {
+            print(defaults.string(forKey: "DateUpdated") == nil
+                  ? "No saved date, refresh from network/bundle"
+                  : "Dates do not match")
             getData()
         }
-        
-        
-        /* Save the new date */
+
         defaults.setValue(dateUpdated, forKey: "DateUpdated")
+    }
+
+    private func optionalDate(from dateString: String) -> Date? {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        return dateFormatter.date(from: dateString)
     }
     
     func getLocalData(){
-        self.routines = Utils.getSavedRoutines()
-        APIRequests.routines = self.routines
+        let saved = Utils.getSavedRoutines()
+        let savedStretches = Utils.getSavedStretches()
+        if !saved.isEmpty && !savedStretches.isEmpty {
+            self.routines = saved
+            APIRequests.routines = saved
+            APIRequests.stretches = savedStretches
+        } else {
+            APIRequests.ensureSeededContent()
+            self.routines = APIRequests.routines
+        }
         self.tableView.reloadData()
-        
-        APIRequests.stretches = Utils.getSavedStretches()
     }
-    
 
-    
     func getData(){
-        let defaults = UserDefaults.standard
-        
         APIRequests.getRoutines(callback: callback(success:))
-        APIRequests.getStretches(callback: {_ in
-            let data = NSKeyedArchiver.archivedData(withRootObject: APIRequests.stretches)
-            defaults.set(data, forKey: "SavedStretches")
+        APIRequests.getStretches(callback: { _ in
+            APIRequests.archiveCurrentContent()
         })
     }
     
     func callback(success: Bool){
+        if !success {
+            APIRequests.ensureSeededContent()
+        }
+        refreshTableFromAPI()
+        APIRequests.archiveCurrentContent()
+    }
+
+    private func refreshTableFromAPI() {
         self.routines = APIRequests.routines
         self.tableView.reloadData()
-        
-        let defaults = UserDefaults.standard
-        let data = NSKeyedArchiver.archivedData(withRootObject: self.routines)
-        defaults.set(data, forKey: "SavedRoutines")
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
