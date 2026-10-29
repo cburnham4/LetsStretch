@@ -56,24 +56,20 @@ class RoutineCell: UITableViewCell {
         routineNameLabel.text = routine.name
         routineImage.backgroundColor = AppTheme.accentSoft
 
-        // Prefer bundled icon as a fast placeholder; final art comes from content downloadURL.
+        // Asset-catalog icon as placeholder; prefer bundled content/ image, then network.
         let placeholder: UIImage? = {
             if let icon = AppTheme.routineIconName(for: routine.name),
                let image = UIImage(named: icon) {
                 return image
             }
-            return UIImage(named: "standing_yoga_stretch")
+            return ContentImages.fallbackPlaceholder
         }()
 
-        if let url = URL(string: routine.imageURL), !routine.imageURL.isEmpty {
-            routineImage.kf.setImage(
-                with: url,
-                placeholder: placeholder,
-                options: [.transition(.fade(0.2))]
-            )
-        } else {
-            routineImage.image = placeholder
-        }
+        ContentImages.load(
+            into: routineImage,
+            remoteURLString: routine.imageURL,
+            placeholder: placeholder
+        )
     }
 
     private func setupChromeIfNeeded() {

@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Kingfisher
 import GoogleMobileAds
 // import this
 import AVFoundation
@@ -121,8 +120,13 @@ class StretchViewController: UIViewController, BannerViewDelegate {
         self.secondsLeft = restTime
         stretchNameLabel.text = stretch.name
         instructionLabel.text = "Get ready — \(stretch.instructions)"
-        let url = URL(string: (stretch.imageURL))
-        stretchImage.kf.setImage(with: url)
+        // Bundled diagram first; network only if missing; placeholder if both fail.
+        stretchImage.backgroundColor = AppTheme.accentSoft
+        ContentImages.load(
+            into: stretchImage,
+            remoteURLString: stretch.imageURL,
+            placeholder: ContentImages.fallbackPlaceholder
+        )
         stretchNumLabel.text = "\(stretchIndex + 1) / \(stretches.count)"
         
         timeLabel.text = "\(secondsLeft)"
