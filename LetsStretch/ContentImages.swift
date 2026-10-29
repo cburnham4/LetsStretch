@@ -38,6 +38,7 @@ enum ContentImages {
 
     /// Load into an image view: local bundle first, then optional Kingfisher network fetch.
     /// On total failure, shows `placeholder` (defaults to standing yoga art).
+    @MainActor
     static func load(
         into imageView: UIImageView,
         remoteURLString: String,

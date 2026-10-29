@@ -121,7 +121,8 @@ class StretchViewController: UIViewController, BannerViewDelegate {
         stretchNameLabel.text = stretch.name
         instructionLabel.text = "Get ready — \(stretch.instructions)"
         // Bundled diagram first; network only if missing; placeholder if both fail.
-        stretchImage.backgroundColor = AppTheme.accentSoft
+        // Keep cream page bg — accentSoft showed as a peach box behind transparent art.
+        stretchImage.backgroundColor = AppTheme.background
         ContentImages.load(
             into: stretchImage,
             remoteURLString: stretch.imageURL,
