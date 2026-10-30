@@ -1,5 +1,1 @@
-What's new in this update:
-
-- Stretch diagrams blend into the cream page background (no peach box)
-- Offline diagram loading reliability improvements
-- Performance and stability improvements
+Faster listing and clearer stretch routines — pick a timed routine and loosen up in minutes.
