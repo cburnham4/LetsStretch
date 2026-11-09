@@ -28,6 +28,7 @@ enum AppStoreReviewPrompt {
     }
 
     /// Call after a user-visible success (e.g. finishing a stretch routine). May present the review preask.
+    /// Prefer passing a VC that will remain visible (e.g. the navigation controller) if the caller is about to pop.
     static func recordSuccessfulActionAndMaybeRequest(from viewController: UIViewController) {
         let defaults = UserDefaults.standard
         let actionCount = defaults.integer(forKey: successfulActionCountKey) + 1
@@ -62,7 +63,16 @@ enum AppStoreReviewPrompt {
         openCount: Int,
         actionCount: Int
     ) {
-        guard viewController.presentedViewController == nil else {
+        guard let presenter = visiblePresenter(preferring: viewController) else {
+            Analytics.logEvent("review_prompt_skipped", parameters: [
+                "reason": "not_in_window_hierarchy",
+                "open_count": openCount as NSNumber,
+                "action_count": actionCount as NSNumber
+            ])
+            return
+        }
+
+        guard presenter.presentedViewController == nil else {
             Analytics.logEvent("review_prompt_skipped", parameters: [
                 "reason": "presenter_busy",
                 "open_count": openCount as NSNumber,
@@ -92,9 +102,44 @@ enum AppStoreReviewPrompt {
                 "open_count": openCount as NSNumber,
                 "action_count": actionCount as NSNumber
             ])
-            requestSystemReview(from: viewController, openCount: openCount, actionCount: actionCount)
+            requestSystemReview(from: presenter, openCount: openCount, actionCount: actionCount)
         })
-        viewController.present(alert, animated: true)
+        presenter.present(alert, animated: true)
+    }
+
+    /// Prefer the caller's VC when still on-screen; otherwise the topmost visible VC in the key window
+    /// (needed when the success path pops the caller before the delayed preask runs).
+    private static func visiblePresenter(preferring viewController: UIViewController) -> UIViewController? {
+        if viewController.viewIfLoaded?.window != nil {
+            return topMost(from: viewController)
+        }
+        if let nav = viewController.navigationController, nav.viewIfLoaded?.window != nil {
+            return topMost(from: nav)
+        }
+
+        let scene = UIApplication.shared.connectedScenes
+            .compactMap { $0 as? UIWindowScene }
+            .first(where: { $0.activationState == .foregroundActive })
+            ?? UIApplication.shared.connectedScenes
+                .compactMap { $0 as? UIWindowScene }.first
+        let window = scene?.windows.first(where: \.isKeyWindow) ?? scene?.windows.first
+        guard let root = window?.rootViewController, root.viewIfLoaded?.window != nil else {
+            return nil
+        }
+        return topMost(from: root)
+    }
+
+    private static func topMost(from root: UIViewController) -> UIViewController {
+        if let presented = root.presentedViewController {
+            return topMost(from: presented)
+        }
+        if let nav = root as? UINavigationController {
+            return topMost(from: nav.visibleViewController ?? nav)
+        }
+        if let tab = root as? UITabBarController {
+            return topMost(from: tab.selectedViewController ?? tab)
+        }
+        return root
     }
 
     private static func requestSystemReview(
