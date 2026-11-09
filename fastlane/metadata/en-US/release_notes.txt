@@ -1,4 +1,5 @@
 What's new in this update:
 
+- Fixed the in-app review prompt so it appears correctly after finishing a routine
 - In-app review prompt with better feedback tracking
 - Stability and polish improvements
