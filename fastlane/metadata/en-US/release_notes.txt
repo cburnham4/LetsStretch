@@ -1,1 +1,4 @@
-Faster listing and clearer stretch routines — pick a timed routine and loosen up in minutes.
+What's new in this update:
+
+- In-app review prompt with better feedback tracking
+- Stability and polish improvements
