@@ -28,8 +28,7 @@ enum AppStoreReviewPrompt {
     }
 
     /// Call after a user-visible success (e.g. finishing a stretch routine). May present the review preask.
-    /// Prefer passing a VC that will remain visible (e.g. the navigation controller) if the caller is about to pop.
-    static func recordSuccessfulActionAndMaybeRequest(from viewController: UIViewController) {
+    static func recordSuccessfulActionAndMaybeRequest(from _: UIViewController) {
         let defaults = UserDefaults.standard
         let actionCount = defaults.integer(forKey: successfulActionCountKey) + 1
         defaults.set(actionCount, forKey: successfulActionCountKey)
@@ -49,21 +48,14 @@ enum AppStoreReviewPrompt {
         // Mark this version before presenting so we don't stack alerts on rapid successes.
         defaults.set(currentVersion, forKey: lastPromptedVersionKey)
 
+        // Delay, then present from whatever is topmost — the caller may have popped by then.
         DispatchQueue.main.asyncAfter(deadline: .now() + requestDelay) {
-            presentEnjoymentPreask(
-                from: viewController,
-                openCount: openCount,
-                actionCount: actionCount
-            )
+            presentEnjoymentPreask(openCount: openCount, actionCount: actionCount)
         }
     }
 
-    private static func presentEnjoymentPreask(
-        from viewController: UIViewController,
-        openCount: Int,
-        actionCount: Int
-    ) {
-        guard let presenter = visiblePresenter(preferring: viewController) else {
+    private static func presentEnjoymentPreask(openCount: Int, actionCount: Int) {
+        guard let presenter = topViewController() else {
             Analytics.logEvent("review_prompt_skipped", parameters: [
                 "reason": "not_in_window_hierarchy",
                 "open_count": openCount as NSNumber,
@@ -107,25 +99,15 @@ enum AppStoreReviewPrompt {
         presenter.present(alert, animated: true)
     }
 
-    /// Prefer the caller's VC when still on-screen; otherwise the topmost visible VC in the key window
-    /// (needed when the success path pops the caller before the delayed preask runs).
-    private static func visiblePresenter(preferring viewController: UIViewController) -> UIViewController? {
-        if viewController.viewIfLoaded?.window != nil {
-            return topMost(from: viewController)
-        }
-        if let nav = viewController.navigationController, nav.viewIfLoaded?.window != nil {
-            return topMost(from: nav)
-        }
-
+    /// Topmost visible view controller in the foreground key window.
+    private static func topViewController() -> UIViewController? {
         let scene = UIApplication.shared.connectedScenes
             .compactMap { $0 as? UIWindowScene }
             .first(where: { $0.activationState == .foregroundActive })
             ?? UIApplication.shared.connectedScenes
                 .compactMap { $0 as? UIWindowScene }.first
         let window = scene?.windows.first(where: \.isKeyWindow) ?? scene?.windows.first
-        guard let root = window?.rootViewController, root.viewIfLoaded?.window != nil else {
-            return nil
-        }
+        guard let root = window?.rootViewController else { return nil }
         return topMost(from: root)
     }
 

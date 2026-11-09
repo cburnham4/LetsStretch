@@ -175,9 +175,7 @@ class StretchViewController: UIViewController, BannerViewDelegate {
     @discardableResult
     private func finishRoutineIfComplete() -> Bool {
         guard stretches.count <= stretchIndex else { return false }
-        // Pass the nav (or self) before popping — the delayed review preask cannot present from a popped VC.
-        let presenter = navigationController ?? self
-        AppStoreReviewPrompt.recordSuccessfulActionAndMaybeRequest(from: presenter)
+        AppStoreReviewPrompt.recordSuccessfulActionAndMaybeRequest(from: self)
         navigationController?.popViewController(animated: true)
         return true
     }
